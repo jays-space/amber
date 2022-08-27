@@ -7,3 +7,5 @@ export type SidebarOptionsGroupType = {
   groupName?: string;
   optionsList: SidebarOptionType[];
 };
+
+export type IconNamesType = "filter" | undefined;

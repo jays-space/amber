@@ -1,5 +1,8 @@
 import { BiFilterAlt } from "react-icons/bi";
 
+// TYPES
+import { IconNamesType } from "../../../types/types";
+
 /**
  * @param name: name of icon to return
  * @param size: icon size
@@ -9,7 +12,7 @@ import { BiFilterAlt } from "react-icons/bi";
  */
 
 interface IIcon {
-  name: "filter";
+  name: IconNamesType;
   size?: number;
   className?: string;
 }
@@ -20,6 +23,8 @@ const Icon = ({ name, size = 24, className = "" }: IIcon) => {
       return (
         <BiFilterAlt size={size} className={`text-slate-500 ${className}`} />
       );
+    case undefined:
+      return null;
   }
 };
 
