@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jay mondlana",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-openapi-validator": "^4.13.8",
+    "swagger-routes-express": "^3.3.2",
+    "validator": "^13.7.0",
+    "yamljs": "^0.3.0"
+  }
+}

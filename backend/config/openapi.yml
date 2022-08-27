@@ -1,0 +1,182 @@
+openapi: 3.0.3
+info:
+  title: AMBER SOFTWARE EMPLOYEES REST API
+  description: |
+    This API allows getting the employee details of amber software employees
+  version: "1.3"
+  contact:
+    name: Jay Mondlana
+    email: contact.jays.space@gmail.com
+    url: "https://jays-space.vercel.app/"
+  license:
+    name: "License (MIT, Apache 2.0, etc)"
+    url: "https://www.apache.org/licenses/LICENSE-2.0.html"
+servers:
+  - url: /api/v1
+paths:
+  /employees:
+    get:
+      summary: Get the employees
+      operationId: getEmployees
+      description: Retrieves all employees in the database.
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Employee"
+                  info:
+                    type: object
+                    properties:
+                      seed:
+                        type: string
+                      results:
+                        type: number
+                      page:
+                        type: integer
+                      version:
+                        type: string
+                        title: "1.3"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 777
+                  message:
+                    type: string
+                    example: Lorem ipsum
+        "500":
+          description: Internal Server Error
+        "501":
+          description: Not Implemented
+      parameters: []
+components:
+  schemas:
+    Employee:
+      title: Employee
+      type: object
+      additionalProperties: false
+      description: Details about an employee
+      properties:
+        gender:
+          type: string
+        name:
+          type: object
+          properties:
+            title:
+              type: string
+            first:
+              type: string
+            last:
+              type: string
+        location:
+          type: object
+          properties:
+            street:
+              type: object
+              properties:
+                number:
+                  type: integer
+                name:
+                  type: string
+            city:
+              type: string
+            state:
+              type: string
+            country:
+              type: string
+            postcode:
+              type: integer
+            coordinates:
+              type: object
+              properties:
+                latitude:
+                  type: string
+                longitude:
+                  type: string
+            timezone:
+              type: object
+              properties:
+                offset:
+                  type: string
+                description:
+                  type: string
+        email:
+          type: string
+          format: email
+          example: employee.email@email.com
+        login:
+          type: object
+          properties:
+            uuid:
+              type: string
+              description: Unique login identifier for the given employee
+              format: uuid
+            username:
+              type: string
+            password:
+              type: string
+              format: password
+            salt:
+              type: string
+              description: Salt encrypted version of the employee password
+            md5:
+              type: string
+              description: MD5 encrypted version of the employee password
+            sha1:
+              type: string
+              description: SHA1 encrypted version of the employee password
+            sha256:
+              type: string
+              description: SHA256 encrypted version of the employee password
+        dob:
+          type: object
+          properties:
+            date:
+              type: string
+              format: date-time
+            age:
+              type: number
+        registered:
+          type: object
+          properties:
+            date:
+              type: string
+              format: date-time
+            age:
+              type: number
+        phone:
+          type: string
+        cell:
+          type: string
+        id:
+          type: object
+          properties:
+            name:
+              type: string
+            value:
+              type: string
+        picture:
+          type: object
+          properties:
+            large:
+              type: string
+              format: uri
+            medium:
+              type: string
+              format: uri
+            thumbnail:
+              type: string
+        nat:
+          type: string
