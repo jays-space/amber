@@ -1,5 +1,6 @@
+import { Text } from "../Typography/Text";
 /**
- * @param label: title of the heading
+ * @param label: content of the tag
  */
 
 interface ITag {
@@ -8,8 +9,8 @@ interface ITag {
 
 const Tag = ({ label }: ITag) => {
   return (
-    <div className="flex justify-center items-center mx-4 py-1 px-2 rounded-md text-sm text-slate-700 bg-neutral-300 capitalize">
-      {label}
+    <div className="flex justify-center items-center mx-4 py-1 px-2 rounded-md text-sm text-slate-700 bg-neutral-300 capitalize opacity-90">
+      <Text>{label}</Text>
     </div>
   );
 };
