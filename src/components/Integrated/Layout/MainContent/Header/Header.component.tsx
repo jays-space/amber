@@ -1,7 +1,5 @@
-import React from "react";
-
 const Header = () => {
-  return <div className="h-20 bg-white shadow">Header</div>;
+  return <header className="h-20 bg-white shadow">Header</header>;
 };
 
 export default Header;

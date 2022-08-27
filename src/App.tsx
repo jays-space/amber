@@ -7,7 +7,7 @@ import "./App.css";
 import { Layout } from "./components/Integrated/Layout";
 
 // ROUTES
-import EmployeesPage from "./pages/EmployeesPage";
+import { EmployeesPage } from "./pages/EmployeesPage/";
 
 function App() {
   useEffect(() => {

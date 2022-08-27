@@ -1,4 +1,4 @@
-import { PageHeader } from "../components/Integrated/PageHeader";
+import { PageHeader } from "../../components/Integrated/PageHeader";
 
 const EmployeesPage = () => {
   return <PageHeader />;

@@ -1,9 +1,11 @@
-import React from 'react'
+import { Heading } from "../../Atomic/Typography/Heading";
 
 const PageHeader = () => {
   return (
-    <div>PageHeader</div>
-  )
-}
+    <div>
+      <Heading variant="h1" label="32 employees" capitalize />
+    </div>
+  );
+};
 
-export default PageHeader
+export default PageHeader;
