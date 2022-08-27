@@ -26,7 +26,7 @@ const Button = ({
           onClick={onClick}
           className={`${baseStyles} !p-2 bg-slate-500  active:bg-slate-600`}
         >
-          <Icon name={icon} className="text-white" size={24} />
+          <Icon name={icon} className="!text-white" size={24} />
         </div>
       );
 

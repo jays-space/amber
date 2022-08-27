@@ -9,11 +9,20 @@ import { ReactNode } from "react";
 
 interface IText {
   children: ReactNode;
+  strong?: boolean;
   className?: string;
 }
 
-const Text = ({ children, className }: IText) => {
-  return <p className={`tracking-wide text-slate-700 ${className}`}>{children}</p>;
+const Text = ({ children, strong = false, className }: IText) => {
+  return (
+    <p
+      className={`tracking-wide  ${
+        strong ? "text-cyan-900 font-semibold" : "text-slate-700"
+      } ${className}`}
+    >
+      {children}
+    </p>
+  );
 };
 
 export default Text;
