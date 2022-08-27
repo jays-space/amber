@@ -7,7 +7,7 @@ import "./App.css";
 import { Layout } from "./components/Integrated/Layout";
 
 // ROUTES
-import { EmployeesPage } from "./pages/EmployeesPage/";
+import { CandidatesPage } from "./pages/CandidatesPage";
 
 function App() {
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<EmployeesPage />} />
+        <Route index element={<CandidatesPage />} />
       </Route>
     </Routes>
   );
