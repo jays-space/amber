@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 
 // COMPONENTS
 import { Layout } from "./components/Integrated/Layout";
+
+// ROUTES
+import EmployeesPage from "./pages/EmployeesPage";
 
 function App() {
   useEffect(() => {
@@ -17,9 +22,11 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Layout />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<EmployeesPage />} />
+      </Route>
+    </Routes>
   );
 }
 
