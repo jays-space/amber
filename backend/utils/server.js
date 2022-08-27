@@ -2,6 +2,7 @@ const express = require("express");
 const OpenApiValidator = require("express-openapi-validator");
 const { connector, summarise } = require("swagger-routes-express");
 const YAML = require("yamljs");
+const cors = require("cors");
 
 const api = require("../api/controllers");
 
@@ -19,6 +20,7 @@ const createServer = async () => {
     validateResponses: true,
   };
 
+  server.use(cors());
   server.use(OpenApiValidator.middleware(options));
 
   const connect = connector(api, apiDefinition, {
