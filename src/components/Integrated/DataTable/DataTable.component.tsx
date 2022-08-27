@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Text } from "../../Atomic/Typography/Text";
+import { TableRow } from "./TableRow";
 
 const columns = [
   {
@@ -38,12 +38,12 @@ const columns = [
     key: "owner",
     width: 100,
   },
-  //   {
-  //     title: "actions",
-  //     dataIndex: "actions",
-  //     key: "actions",
-  //     width: 100,
-  //   },
+    {
+      title: "actions",
+      dataIndex: "actions",
+      key: "actions",
+      width: 100,
+    },
 ];
 
 const data = [
@@ -55,9 +55,11 @@ const data = [
       country: "south africa",
     },
     stage: "screening",
-    position: "Junior UI Designer",
-    team: "design team",
-    date: new Date().toLocaleDateString(),
+    position: {
+      role: "Junior UI Designer",
+      team: "design team",
+    },
+    date: new Date(),
     owner: "albert flores",
   },
   {
@@ -68,9 +70,11 @@ const data = [
       country: "south africa",
     },
     stage: "screening",
-    position: "Junior UI Designer",
-    team: "design team",
-    date: new Date().toLocaleDateString(),
+    position: {
+      role: "Junior UI Designer",
+      team: "design team",
+    },
+    date: new Date(),
     owner: "albert flores",
   },
   {
@@ -81,9 +85,8 @@ const data = [
       country: "south africa",
     },
     stage: "screening",
-    position: "Junior UI Designer",
-    team: "design team",
-    date: new Date().toLocaleDateString(),
+    position: { role: "Junior UI Designer", team: "design team" },
+    date: new Date(),
     owner: "albert flores",
   },
   {
@@ -94,32 +97,18 @@ const data = [
       country: "south africa",
     },
     stage: "screening",
-    position: "Junior UI Designer",
-    team: "design team",
-    date: new Date().toLocaleDateString(),
+    position: { role: "Junior UI Designer", team: "design team" },
+    date: new Date(),
     owner: "albert flores",
   },
 ];
 
-const stages = [
-  { name: "new applied", position: 1 },
-  { name: "screening", position: 2 },
-  { name: "design challenge", position: 3 },
-  { name: "interview", position: 4 },
-  { name: "test", position: 5 },
-  { name: "hire", position: 6 },
-];
-
 const DataTable = () => {
-    const [stageLabel, setStageLabel] = useState<string>("")
   return (
     <div className="mt-10">
-      <div className="grid grid-cols-8 py-3 px-4 rounded-lg shadow-md bg-white">
+      <div className="grid grid-cols-7 py-3 px-4 rounded-lg shadow-md bg-white">
         {columns.map((col) => (
-          <div
-            key={col.key}
-            className="col-span-1 first-of-type:col-span-2 last-of-type:col-span-2"
-          >
+          <div key={col.key} className="col-span-1">
             <Text className="text-sm font-bold !tracking-wide capitalize">
               {col.title}
             </Text>
@@ -127,79 +116,7 @@ const DataTable = () => {
         ))}
       </div>
 
-      <div className="my-10 py-3 px-4 rounded-lg shadow-md bg-white">
-        {data.map((row) => (
-          <div key={row.key} className="grid grid-cols-8 py-4 border-b">
-            <div className="flex items-center col-span-2">
-              <input type={"checkbox"} />
-              <img
-                src="https://randomuser.me/api/portraits/men/59.jpg"
-                alt={row.name}
-                className="w-10 ml-5 mr-4 aspect-square rounded-full"
-              />
-              <Text strong className="text-xl capitalize">
-                {row.name}
-              </Text>
-            </div>
-
-            <div>
-              <span>
-                <Text
-                  strong
-                  className="w-10/12 text-xl whitespace-nowrap text-ellipsis overflow-hidden capitalize"
-                >
-                  {row.location.city}
-                </Text>
-              </span>
-              <span>
-                <Text className="capitalize opacity-75">
-                  {row.location.country}
-                </Text>
-              </span>
-            </div>
-
-            <div>
-              <select name="stage" onChange={(e) => setStageLabel(e.target.value)} className='border-none capitalize text-slate-700 pl-0'>
-                {stages.map((stage) => (
-                  <option key={stage.position} value={stage.name} selected={row.stage === stage.name} className='p-10 text-lg'>
-                    {stage.name}
-                  </option>
-                ))}
-              </select>
-              <Text>{stageLabel || row.stage}</Text>
-            </div>
-
-            <div>
-              <span>
-                <Text
-                  strong
-                  className="w-10/12 text-xl whitespace-nowrap text-ellipsis overflow-hidden"
-                >
-                  {row.position}
-                </Text>
-              </span>
-              <span>
-                <Text className="capitalize opacity-75">{row.team}</Text>
-              </span>
-            </div>
-
-            <Text strong className="text-xl">
-              {row.date}
-            </Text>
-
-            <div className="flex items-center col-span-2">
-              <img
-                src="https://randomuser.me/api/portraits/men/59.jpg"
-                alt={row.owner}
-                className="w-10 mr-4 aspect-square rounded-full"
-              />
-              <Text strong className="text-xl capitalize">
-                {row.owner}
-              </Text>
-            </div>
-          </div>
-        ))}
-      </div>
+      <TableRow data={data} />
     </div>
   );
 };
