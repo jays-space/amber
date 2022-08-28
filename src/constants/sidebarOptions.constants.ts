@@ -5,7 +5,6 @@ const SidebarMenuOptions: SidebarOptionsGroupType[] = [
   {
     optionsList: [
       { label: "home", icon: "" },
-      { label: "inbox", icon: "" },
       { label: "messages", icon: "" },
       { label: "calendar", icon: "" },
     ],
@@ -22,7 +21,7 @@ const SidebarMenuOptions: SidebarOptionsGroupType[] = [
     groupName: "organization",
     optionsList: [
       { label: "employees", icon: "" },
-      { label: "structure", icon: "" },
+      { label: "candidates", icon: "" },
       { label: "report", icon: "" },
       { label: "settings", icon: "" },
     ],

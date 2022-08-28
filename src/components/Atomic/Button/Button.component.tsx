@@ -46,7 +46,7 @@ const Button = ({
           onClick={onClick}
           className={`${baseStyles} !py-1.5 text-cyan-800 border-2 border-cyan-800 border-opacity-75  active:border-cyan-900`}
         >
-          <Icon name={icon} className="mr-2 text-cyan-800" />
+          <Icon name={icon} className="mr-2 !text-cyan-800" />
           {label}
         </div>
       );
