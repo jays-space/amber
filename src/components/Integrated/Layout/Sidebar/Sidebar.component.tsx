@@ -22,7 +22,7 @@ const Sidebar = () => {
             <div
               className={`flex items-center my-2 py-3 px-4 rounded-md cursor-pointer  ${
                 option.label === "candidates"
-                  ? "bg-yellow-500 hover:bg-yellow-600"
+                  ? "bg-yellow-500 hover:bg-opacity-80"
                   : "hover:bg-slate-800"
               } transform ease-out duration-100`}
             >

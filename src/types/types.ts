@@ -14,6 +14,8 @@ export type IconNamesType =
   | "people"
   | "report"
   | "settings"
+  | "minimize"
+  | "notification"
   | undefined;
 
 export type SidebarOptionType = {

@@ -3,7 +3,7 @@ import { BsPeople, BsPerson } from "react-icons/bs";
 import { IoMdAdd } from "react-icons/io";
 import { RiSettings2Line } from "react-icons/ri";
 import { FiMoreVertical, FiInbox } from "react-icons/fi";
-import { FaTasks, FaProjectDiagram } from "react-icons/fa";
+import { FaTasks, FaProjectDiagram, FaRegBell } from "react-icons/fa";
 import {
   AiOutlineDownload,
   AiOutlinePrinter,
@@ -11,6 +11,7 @@ import {
   AiOutlineSchedule,
 } from "react-icons/ai";
 import { SiBmcsoftware } from "react-icons/si";
+import { TiArrowMinimise } from "react-icons/ti";
 
 // TYPES
 import { IconNamesType } from "../../../types/types";
@@ -107,6 +108,22 @@ const Icon = ({ name, size = 24, className = "" }: IIcon) => {
     case "settings":
       return (
         <RiSettings2Line
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "minimize":
+      return (
+        <TiArrowMinimise
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "notification":
+      return (
+        <FaRegBell
           size={size}
           className={`text-slate-500 ${className}`}
         />
