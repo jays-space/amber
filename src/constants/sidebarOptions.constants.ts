@@ -4,26 +4,26 @@ import { SidebarOptionsGroupType } from "../types/types";
 const SidebarMenuOptions: SidebarOptionsGroupType[] = [
   {
     optionsList: [
-      { label: "home", icon: "" },
-      { label: "messages", icon: "" },
-      { label: "calendar", icon: "" },
+      { label: "home", icon: "home" },
+      { label: "messages", icon: "inbox" },
+      { label: "calendar", icon: "calendar" },
     ],
   },
   {
     groupName: "development",
     optionsList: [
-      { label: "tasks", icon: "" },
-      { label: "projects", icon: "" },
-      { label: "releases", icon: "" },
+      { label: "tasks", icon: "task" },
+      { label: "projects", icon: "project" },
+      { label: "releases", icon: "new" },
     ],
   },
   {
     groupName: "organization",
     optionsList: [
-      { label: "employees", icon: "" },
-      { label: "candidates", icon: "" },
-      { label: "report", icon: "" },
-      { label: "settings", icon: "" },
+      { label: "employees", icon: "person" },
+      { label: "candidates", icon: "people" },
+      { label: "report", icon: "report" },
+      { label: "settings", icon: "settings" },
     ],
   },
 ];

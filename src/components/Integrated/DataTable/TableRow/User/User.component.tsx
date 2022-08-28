@@ -17,7 +17,7 @@ const User = ({ name, avatar, candidate = false }: IUsername) => {
       />
       <Text
         strong
-        className="pr-4 text-xl capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+        className="pr-4 text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
       >
         {name}
       </Text>

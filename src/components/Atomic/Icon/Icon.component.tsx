@@ -1,7 +1,16 @@
-import { BiFilterAlt } from "react-icons/bi";
+import { BiFilterAlt, BiHomeAlt } from "react-icons/bi";
+import { BsPeople, BsPerson } from "react-icons/bs";
 import { IoMdAdd } from "react-icons/io";
-import { FiMoreVertical } from "react-icons/fi";
-import { AiOutlineDownload, AiOutlinePrinter } from "react-icons/ai";
+import { RiSettings2Line } from "react-icons/ri";
+import { FiMoreVertical, FiInbox } from "react-icons/fi";
+import { FaTasks, FaProjectDiagram } from "react-icons/fa";
+import {
+  AiOutlineDownload,
+  AiOutlinePrinter,
+  AiOutlinePieChart,
+  AiOutlineSchedule,
+} from "react-icons/ai";
+import { SiBmcsoftware } from "react-icons/si";
 
 // TYPES
 import { IconNamesType } from "../../../types/types";
@@ -49,6 +58,58 @@ const Icon = ({ name, size = 24, className = "" }: IIcon) => {
     case "more":
       return (
         <FiMoreVertical size={size} className={`text-slate-500 ${className}`} />
+      );
+
+    case "home":
+      return (
+        <BiHomeAlt size={size} className={`text-slate-500 ${className}`} />
+      );
+
+    case "inbox":
+      return <FiInbox size={size} className={`text-slate-500 ${className}`} />;
+
+    case "calendar":
+      return (
+        <AiOutlineSchedule
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "task":
+      return <FaTasks size={size} className={`text-slate-500 ${className}`} />;
+
+    case "project":
+      return (
+        <FaProjectDiagram
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "new":
+      return <SiBmcsoftware size={size} className={`text-slate-500 ${className}`} />;
+
+    case "person":
+      return <BsPerson size={size} className={`text-slate-500 ${className}`} />;
+
+    case "people":
+      return <BsPeople size={size} className={`text-slate-500 ${className}`} />;
+
+    case "report":
+      return (
+        <AiOutlinePieChart
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "settings":
+      return (
+        <RiSettings2Line
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case undefined:

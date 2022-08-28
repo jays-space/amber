@@ -2,11 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-.rc-table-content,
-table {
-  width: 100%;
-}
-
-.rc-table-cell {
-  text-align: left;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');

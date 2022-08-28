@@ -1,5 +1,6 @@
 // CONSTANTS
 import SidebarMenuOptions from "../../../../constants/sidebarOptions.constants";
+import { Icon } from "../../../Atomic/Icon";
 import { Text } from "../../../Atomic/Typography/Text";
 
 const Sidebar = () => {
@@ -18,8 +19,30 @@ const Sidebar = () => {
             </Text>
           )}
           {optionGroup.optionsList.map((option, idx) => (
-            <div className={`flex items-center my-2 py-3 px-4 rounded-md cursor-pointer  ${option.label === 'candidates' ? "bg-yellow-500 hover:bg-yellow-600" : "hover:bg-slate-800"} transform ease-out duration-100`}>
-              <Text key={idx} className={`${option.label === 'candidates' ? "!text-slate-800 !font-bold !tracking-wider" : "text-white"} capitalize`}>
+            <div
+              className={`flex items-center my-2 py-3 px-4 rounded-md cursor-pointer  ${
+                option.label === "candidates"
+                  ? "bg-yellow-500 hover:bg-yellow-600"
+                  : "hover:bg-slate-800"
+              } transform ease-out duration-100`}
+            >
+              <Icon
+                name={option.icon}
+                size={20}
+                className={`${
+                  option.label === "candidates"
+                    ? "!text-slate-900"
+                    : "text-slate-700"
+                } mr-4`}
+              />
+              <Text
+                key={idx}
+                className={`capitalize ${
+                  option.label === "candidates"
+                    ? "!text-slate-900 !font-bold !tracking-wider"
+                    : "text-white"
+                } `}
+              >
                 {option.label}
               </Text>
             </div>

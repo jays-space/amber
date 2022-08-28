@@ -43,7 +43,7 @@ const TableRow = ({ data }: ITableRow) => {
 
           <Position position={row.position} />
 
-          <Text strong className="text-xl">
+          <Text strong className="text-lg">
             {row.date.toLocaleDateString()}
           </Text>
 

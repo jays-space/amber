@@ -12,7 +12,7 @@ const Location = ({ city, country }: ILocation) => {
       <span>
         <Text
           strong
-          className="w-10/12 text-xl whitespace-nowrap text-ellipsis overflow-hidden capitalize"
+          className="w-10/12 text-lg whitespace-nowrap text-ellipsis overflow-hidden capitalize"
         >
           {city}
         </Text>

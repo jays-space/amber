@@ -4,11 +4,21 @@ export type IconNamesType =
   | "print"
   | "add"
   | "more"
+  | "home"
+  | "inbox"
+  | "calendar"
+  | "task"
+  | "project"
+  | "new"
+  | "person"
+  | "people"
+  | "report"
+  | "settings"
   | undefined;
 
 export type SidebarOptionType = {
   label: string;
-  icon?: string;
+  icon?: IconNamesType;
 };
 
 export type SidebarOptionsGroupType = {

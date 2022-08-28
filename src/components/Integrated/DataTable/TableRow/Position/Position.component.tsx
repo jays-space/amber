@@ -14,7 +14,7 @@ const Position = ({ position }: IPosition) => {
       <span>
         <Text
           strong
-          className="w-10/12 text-xl whitespace-nowrap text-ellipsis overflow-hidden"
+          className="w-10/12 text-lg whitespace-nowrap text-ellipsis overflow-hidden"
         >
           {position.role}
         </Text>
