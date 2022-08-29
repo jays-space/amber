@@ -13,7 +13,7 @@ interface ITableRow {
       city: string;
       country: string;
     };
-    stage: string;
+    stage: number;
     position: {
       role: string;
       team: string;
