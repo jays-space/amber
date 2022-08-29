@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { BasicInfo } from "../../components/Integrated/CandidateDetails/BasicInfo";
-import { LocationInfo } from "../../components/Integrated/CandidateDetails/LocationInfo";
-
-// COMPONENTS
-import { Detail } from "../../components/Integrated/Detail";
-import { CandidatePageHeader } from "../../components/Integrated/PageHeader/CandidatePage";
-import { TabMenu } from "../../components/Integrated/TabMenu";
 
 // TYPES
 import { CandidateType } from "../../types/types";
-import { getFormattedDate } from "../../utils/dateTime.utils";
+
+// COMPONENTS
+import { BasicInfo } from "../../components/Integrated/CandidateDetails/BasicInfo";
+import { LocationInfo } from "../../components/Integrated/CandidateDetails/LocationInfo";
+import { Application } from "../../components/Integrated/CandidateDetails/Application";
+import { CandidatePageHeader } from "../../components/Integrated/PageHeader/CandidatePage";
+import { TabMenu } from "../../components/Integrated/TabMenu";
+import { Login } from "../../components/Integrated/CandidateDetails/Login";
 
 const CandidatePage = () => {
   const [candidate, setCandidate] = useState<CandidateType | null>(null);
@@ -42,10 +42,19 @@ const CandidatePage = () => {
       <div className="my-6 py-3 px-4 rounded-lg shadow-lg bg-white">
         <TabMenu />
 
+        {/* application details */}
+
         {/* candidate details */}
-        <div className="mt-16 mb-2 grid grid-cols-1 gap-4">
-          <BasicInfo candidate={candidate} />
-          <LocationInfo candidate={candidate} />
+        <div className="mt-20 px-4">
+          <Application candidate={candidate} />
+          <div className="mt-10 mb-2 grid grid-flow-row gap-6">
+            <div className="grid grid-cols-2 gap-6">
+              <BasicInfo candidate={candidate} />
+              <LocationInfo candidate={candidate} />
+            </div>
+
+            <Login candidate={candidate} />
+          </div>
         </div>
       </div>
     </div>

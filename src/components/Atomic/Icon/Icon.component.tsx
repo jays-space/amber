@@ -1,4 +1,10 @@
-import { BiFilterAlt, BiHomeAlt, BiMessageSquareDetail, BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import {
+  BiFilterAlt,
+  BiHomeAlt,
+  BiMessageSquareDetail,
+  BiChevronLeft,
+  BiChevronRight,
+} from "react-icons/bi";
 import { BsPeople, BsPerson, BsArrowLeft } from "react-icons/bs";
 import { IoMdAdd } from "react-icons/io";
 import { RiSettings2Line } from "react-icons/ri";
@@ -9,6 +15,8 @@ import {
   AiOutlinePrinter,
   AiOutlinePieChart,
   AiOutlineSchedule,
+  AiOutlineEyeInvisible,
+  AiOutlineEye,
 } from "react-icons/ai";
 import { SiBmcsoftware } from "react-icons/si";
 import { TiArrowMinimise } from "react-icons/ti";
@@ -29,9 +37,15 @@ interface IIcon {
   name: IconNamesType;
   size?: number;
   className?: string;
+  onClick?: () => void;
 }
 
-const Icon = ({ name, size = 24, className = "" }: IIcon) => {
+const Icon = ({
+  name,
+  size = 24,
+  className = "",
+  onClick = () => {},
+}: IIcon) => {
   switch (name) {
     case "filter":
       return (
@@ -90,7 +104,9 @@ const Icon = ({ name, size = 24, className = "" }: IIcon) => {
       );
 
     case "new":
-      return <SiBmcsoftware size={size} className={`text-slate-500 ${className}`} />;
+      return (
+        <SiBmcsoftware size={size} className={`text-slate-500 ${className}`} />
+      );
 
     case "person":
       return <BsPerson size={size} className={`text-slate-500 ${className}`} />;
@@ -124,10 +140,7 @@ const Icon = ({ name, size = 24, className = "" }: IIcon) => {
 
     case "notification":
       return (
-        <FaRegBell
-          size={size}
-          className={`text-slate-500 ${className}`}
-        />
+        <FaRegBell size={size} className={`text-slate-500 ${className}`} />
       );
 
     case "message":
@@ -140,33 +153,39 @@ const Icon = ({ name, size = 24, className = "" }: IIcon) => {
 
     case "email":
       return (
-        <HiOutlineMail
-          size={size}
-          className={`text-slate-500 ${className}`}
-        />
+        <HiOutlineMail size={size} className={`text-slate-500 ${className}`} />
       );
 
     case "previous":
       return (
-        <BiChevronLeft
-          size={size}
-          className={`text-slate-500 ${className}`}
-        />
+        <BiChevronLeft size={size} className={`text-slate-500 ${className}`} />
       );
 
     case "next":
       return (
-        <BiChevronRight
-          size={size}
-          className={`text-slate-500 ${className}`}
-        />
+        <BiChevronRight size={size} className={`text-slate-500 ${className}`} />
       );
 
     case "back":
       return (
-        <BsArrowLeft
+        <BsArrowLeft size={size} className={`text-slate-500 ${className}`} />
+      );
+
+    case "visible":
+      return (
+        <AiOutlineEye
           size={size}
           className={`text-slate-500 ${className}`}
+          onClick={onClick}
+        />
+      );
+
+    case "hidden":
+      return (
+        <AiOutlineEyeInvisible
+          size={size}
+          className={`text-slate-500 ${className}`}
+          onClick={onClick}
         />
       );
 

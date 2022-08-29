@@ -11,8 +11,8 @@ import { Heading } from "../../../Atomic/Typography/Heading";
 const BasicInfo = ({ candidate }: { candidate: CandidateType }) => {
   return (
     <div>
-      <Heading variant="h4" label="basic info" capitalize className="mb-2"/>
-      <div className="p-4 grid grid-cols-3 gap-6 border rounded-md">
+      <Heading variant="h4" label="basic info" capitalize className="mb-2" />
+      <div className="p-4 grid grid-cols-1 gap-6 border rounded-md">
         <Detail
           label="full name"
           content={[

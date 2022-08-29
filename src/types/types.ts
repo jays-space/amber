@@ -21,6 +21,8 @@ export type IconNamesType =
   | "next"
   | "back"
   | "notification"
+  | "visible"
+  | "hidden"
   | undefined;
 
 export type SidebarOptionType = {
