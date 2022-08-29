@@ -40,7 +40,14 @@ const Header = () => {
         <span className="h-10 w-0.5 mx-8 bg-slate-600 rounded-lg opacity-20" />
 
         {/* search bar */}
-        <input type={"search"} className="w-full border-2" />
+        <div className="relative flex items-center gap-4">
+          <Icon name="search" className="absolute ml-2 pointer-events-none" />
+          <input
+            type={"search"}
+            placeholder="search..."
+            className="w-full py-4 pl-10 pr-20 border-none text-xl focus-visible:outline-slate-400"
+          />
+        </div>
       </div>
 
       {/* current user */}

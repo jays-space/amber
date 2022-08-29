@@ -1,12 +1,16 @@
 // CONSTANTS
 import SidebarMenuOptions from "../../../../constants/sidebarOptions.constants";
+
+// COMPONENTS
 import { Icon } from "../../../Atomic/Icon";
 import { Text } from "../../../Atomic/Typography/Text";
 
 const Sidebar = () => {
   return (
     <div className="w-1/6 p-6 bg-slate-900">
-      <div className="mt-2 mb-12 px-4 text-3xl text-white">LOGO</div>
+      <div className="mt-2 mb-12 px-4">
+          <img src="/logo.png" alt="amber software logo" />
+      </div>
 
       {SidebarMenuOptions.map((optionGroup, idx) => (
         <div key={idx} className="mb-8">

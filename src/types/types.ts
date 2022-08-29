@@ -23,6 +23,7 @@ export type IconNamesType =
   | "notification"
   | "visible"
   | "hidden"
+  | "search"
   | undefined;
 
 export type SidebarOptionType = {

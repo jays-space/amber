@@ -5,7 +5,7 @@ import {
   BiChevronLeft,
   BiChevronRight,
 } from "react-icons/bi";
-import { BsPeople, BsPerson, BsArrowLeft } from "react-icons/bs";
+import { BsPeople, BsPerson, BsArrowLeft,BsSearch } from "react-icons/bs";
 import { IoMdAdd } from "react-icons/io";
 import { RiSettings2Line } from "react-icons/ri";
 import { FiMoreVertical, FiInbox } from "react-icons/fi";
@@ -183,6 +183,15 @@ const Icon = ({
     case "hidden":
       return (
         <AiOutlineEyeInvisible
+          size={size}
+          className={`text-slate-500 ${className}`}
+          onClick={onClick}
+        />
+      );
+
+    case "search":
+      return (
+        <BsSearch
           size={size}
           className={`text-slate-500 ${className}`}
           onClick={onClick}

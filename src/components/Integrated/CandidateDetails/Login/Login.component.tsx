@@ -5,10 +5,7 @@ import { CandidateType } from "../../../../types/types";
 
 // COMPONENTS
 import { Detail } from "../../Detail";
-import { Heading } from "../../../Atomic/Typography/Heading";
-import { Icon } from "../../../Atomic/Icon";
 import { Button } from "../../../Atomic/Button";
-import { Text } from "../../../Atomic/Typography/Text";
 
 const Login = ({ candidate }: { candidate: CandidateType }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
