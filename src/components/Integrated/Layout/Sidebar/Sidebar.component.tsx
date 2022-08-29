@@ -17,7 +17,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }: ISidebar) => {
     <div
       className={`${
         isCollapsed ? "w-20 p-4" : "md:w-1/4 lg:w-1/6 p-6"
-      } h-screen bg-slate-900 transform ease-out duration-300 cursor-pointer hidden md:block z-50`}
+      } bg-slate-900 transform ease-out duration-300 cursor-pointer hidden md:block z-50`}
     >
       <div className="relative mt-2 mb-12 px-4">
         <img
