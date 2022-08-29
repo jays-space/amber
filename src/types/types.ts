@@ -102,11 +102,13 @@ export type CandidateType = {
   login: CandidateAuthType;
   dob: CandidateDOBType;
   registered: CandidateRegisteredType;
+  email: string;
   phone: string;
   cell: string;
   id: CandidateIDType;
   picture: CandidateAvatarType;
-
+  nat: string;
+  
   // additional definitions for UI
   stage: number;
   position: CandidatePositionType;

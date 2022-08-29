@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 // TYPES
 import { CandidateType } from "../../../../types/types";
+import { getFormattedDate } from "../../../../utils/dateTime.utils";
 
 // COMPONENTS
 import { Text } from "../../../Atomic/Typography/Text";
@@ -18,7 +19,7 @@ const TableRow = ({ data }: ITableRow) => {
   const navigate = useNavigate();
 
   return (
-    <div className="my-6 rounded-lg shadow-md bg-white">
+    <div className="my-6 rounded-lg shadow-lg bg-white">
       {data.map((row) => (
         <div
           key={row.login.uuid}
@@ -37,7 +38,7 @@ const TableRow = ({ data }: ITableRow) => {
           <Position position={row.position} />
 
           <Text strong className="text-lg">
-            {row.registered.date}
+            {getFormattedDate(row.registered.date)}
           </Text>
 
           <User

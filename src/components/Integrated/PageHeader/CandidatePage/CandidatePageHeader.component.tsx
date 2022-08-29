@@ -12,7 +12,7 @@ import { Stage } from "../../DataTable/TableRow/Stage";
 const CandidatePageHeader = ({ candidate }: { candidate: CandidateType }) => {
   const navigate = useNavigate();
   return (
-    <>
+    <div className="flex justify-between items-center">
       {/* candidate details */}
       <div className="flex items-center">
         <Button variant="icon-dark" icon="back" onClick={() => navigate(-1)} />
@@ -23,11 +23,14 @@ const CandidatePageHeader = ({ candidate }: { candidate: CandidateType }) => {
           className="rounded-full mx-4"
         />
         <div>
-          {/* name */}
-          <Heading
-            variant="h3"
-            label={`${candidate.name.first} ${candidate.name.last}`}
-          />
+          {/* name + nationality */}
+          <div className="flex items-center gap-2">
+            <Heading
+              variant="h3"
+              label={`${candidate.name.first} ${candidate.name.last}`}
+            />
+            <Text className="capitalize opacity-75">{`(${candidate.nat})`}</Text>
+          </div>
 
           {/* position */}
           <Text className="capitalize opacity-75">{`${candidate.position.team} ~ ${candidate.position.role}`}</Text>
@@ -44,7 +47,7 @@ const CandidatePageHeader = ({ candidate }: { candidate: CandidateType }) => {
         <Button variant="secondary" label="send message" icon="message" />
         <Button variant="secondary" label="send email" icon="email" />
       </div>
-    </>
+    </div>
   );
 };
 
