@@ -1,5 +1,5 @@
-import { BiFilterAlt, BiHomeAlt } from "react-icons/bi";
-import { BsPeople, BsPerson } from "react-icons/bs";
+import { BiFilterAlt, BiHomeAlt, BiMessageSquareDetail, BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { BsPeople, BsPerson, BsArrowLeft } from "react-icons/bs";
 import { IoMdAdd } from "react-icons/io";
 import { RiSettings2Line } from "react-icons/ri";
 import { FiMoreVertical, FiInbox } from "react-icons/fi";
@@ -12,6 +12,7 @@ import {
 } from "react-icons/ai";
 import { SiBmcsoftware } from "react-icons/si";
 import { TiArrowMinimise } from "react-icons/ti";
+import { HiOutlineMail } from "react-icons/hi";
 
 // TYPES
 import { IconNamesType } from "../../../types/types";
@@ -124,6 +125,46 @@ const Icon = ({ name, size = 24, className = "" }: IIcon) => {
     case "notification":
       return (
         <FaRegBell
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "message":
+      return (
+        <BiMessageSquareDetail
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "email":
+      return (
+        <HiOutlineMail
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "previous":
+      return (
+        <BiChevronLeft
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "next":
+      return (
+        <BiChevronRight
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
+
+    case "back":
+      return (
+        <BsArrowLeft
           size={size}
           className={`text-slate-500 ${className}`}
         />

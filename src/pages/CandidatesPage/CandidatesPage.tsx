@@ -5,7 +5,7 @@ import { CandidateType } from "../../types/types";
 
 // COMPONENTS
 import { DataTable } from "../../components/Integrated/DataTable";
-import { PageHeader } from "../../components/Integrated/PageHeader";
+import { CandidatesPageHeader } from "../../components/Integrated/PageHeader/CandidatesPage";
 
 const CandidatesPage = () => {
   const [candidates, setCandidates] = useState<CandidateType[] | null>(null);
@@ -31,10 +31,10 @@ const CandidatesPage = () => {
 
   // Render spinner if data is not yet ready
   if (!candidates) return <h1>"loading..."</h1>;
-  
+
   return (
     <>
-      <PageHeader candidates={candidates.length} />
+      <CandidatesPageHeader candidates={candidates.length} />
       <DataTable data={candidates} />
     </>
   );

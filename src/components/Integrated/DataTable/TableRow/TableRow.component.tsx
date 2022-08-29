@@ -32,7 +32,7 @@ const TableRow = ({ data }: ITableRow) => {
 
           <Location city={row.location.city} country={row.location.country} />
 
-          <Stage currentStage={row.stage} />
+          <Stage select currentStage={row.stage} />
 
           <Position position={row.position} />
 

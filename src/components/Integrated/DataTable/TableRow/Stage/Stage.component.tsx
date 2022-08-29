@@ -5,6 +5,7 @@ import { Text } from "../../../../Atomic/Typography/Text";
 
 interface IStage {
   currentStage: number;
+  select?: boolean;
 }
 
 const stages = [
@@ -15,7 +16,7 @@ const stages = [
   { name: "hire", position: 5 },
 ];
 
-const Stage = ({ currentStage }: IStage) => {
+const Stage = ({ currentStage, select }: IStage) => {
   const [stagePosition, setStagePosition] = useState<number>(currentStage);
 
   const getStageColor = (stagePosition: number) => {
@@ -39,22 +40,24 @@ const Stage = ({ currentStage }: IStage) => {
 
   return (
     <div className="relative z-20">
-      <select
-        name="stage"
-        onChange={(e) => setStagePosition(parseInt(e.target.value))}
-        className="after:absolute after:top-3 after:right-3 after:w-0 after:h-0 after:border-none"
-      >
-        {stages.map((stage) => (
-          <option
-            key={stage.position}
-            value={stage.position}
-            selected={currentStage === stage.position}
-            className="p-10 text-lg"
-          >
-            {stage.name}
-          </option>
-        ))}
-      </select>
+      {select && (
+        <select
+          name="stage"
+          onChange={(e) => setStagePosition(parseInt(e.target.value))}
+          className="after:absolute after:top-3 after:right-3 after:w-0 after:h-0 after:border-none"
+        >
+          {stages.map((stage) => (
+            <option
+              key={stage.position}
+              value={stage.position}
+              selected={currentStage === stage.position}
+              className="p-10 text-lg"
+            >
+              {stage.name}
+            </option>
+          ))}
+        </select>
+      )}
 
       <div className=" mt-2 flex">
         {stages.map((stage) => {

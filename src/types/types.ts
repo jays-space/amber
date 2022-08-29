@@ -15,6 +15,11 @@ export type IconNamesType =
   | "report"
   | "settings"
   | "minimize"
+  | "message"
+  | "email"
+  | "previous"
+  | "next"
+  | "back"
   | "notification"
   | undefined;
 

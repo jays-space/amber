@@ -1,10 +1,10 @@
 // COMPONENTS
-import { Button } from "../../Atomic/Button";
-import { Tag } from "../../Atomic/Tag";
-import { Heading } from "../../Atomic/Typography/Heading";
-import { Filter } from "../Filter";
+import { Button } from "../../../Atomic/Button";
+import { Tag } from "../../../Atomic/Tag";
+import { Heading } from "../../../Atomic/Typography/Heading";
+import { Filter } from "../../Filter";
 
-const PageHeader = ({ candidates }: { candidates: number }) => {
+const CandidatesPageHeader = ({ candidates }: { candidates: number }) => {
   return (
     <div className="flex justify-between items-center">
       {/* left content */}
@@ -33,4 +33,4 @@ const PageHeader = ({ candidates }: { candidates: number }) => {
   );
 };
 
-export default PageHeader;
+export default CandidatesPageHeader;

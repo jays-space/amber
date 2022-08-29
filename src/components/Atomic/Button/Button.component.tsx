@@ -24,7 +24,7 @@ const Button = ({
       return (
         <div
           onClick={onClick}
-          className={`${baseStyles} !p-2 bg-slate-500  active:bg-slate-600`}
+          className={`${baseStyles} w-11 aspect-square !p-2 bg-slate-500  active:bg-slate-600`}
         >
           <Icon name={icon} className="!text-white" size={24} />
         </div>
@@ -34,7 +34,7 @@ const Button = ({
       return (
         <div
           onClick={onClick}
-          className={`${baseStyles} !p-2 bg-white hover:bg-slate-50 active:bg-slate-200`}
+          className={`${baseStyles} w-11 aspect-square !p-2 bg-white hover:bg-slate-50 active:bg-slate-200`}
         >
           <Icon name={icon} className="text-slate-700" size={24} />
         </div>
