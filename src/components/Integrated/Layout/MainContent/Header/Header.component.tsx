@@ -1,3 +1,6 @@
+// CONSTANTS
+import recruiter from "../../../../../constants/recruiter.constants";
+
 // COMPONENTS
 import { Icon } from "../../../../Atomic/Icon";
 
@@ -45,8 +48,8 @@ const Header = () => {
         <HeaderButton variant="primary" />
         <HeaderButton variant="secondary" />
         <img
-          src="https://randomuser.me/api/portraits/men/59.jpg"
-          alt="current user avatar"
+          src={recruiter.avatar}
+          alt={`${recruiter.name}'s avatar`}
           className="w-14 aspect-square rounded-full"
         />
       </div>
