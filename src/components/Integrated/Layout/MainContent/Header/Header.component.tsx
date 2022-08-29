@@ -17,12 +17,12 @@ const Header = () => {
     <header className="relative flex flex-row justify-between items-center px-5 md:px-10 lg:px-20 py-3 bg-white shadow">
       <div className="flex flex-1">
         {/* logo => hidden on smaller screens */}
-        <div>
+        <div className="md:hidden">
           <img src="/logo.png" alt="amber software logo" className="w-32" />
         </div>
 
         {/* search bar => hidden on smaller screens */}
-        <div className="relative hidden items-center gap-4">
+        <div className="relative hidden md:flex items-center gap-4">
           <Icon name="search" className="absolute ml-2 pointer-events-none" />
           <input
             type={"search"}
