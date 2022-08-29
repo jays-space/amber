@@ -14,7 +14,7 @@ interface IHeading {
 }
 
 const Heading = ({ variant, label, capitalize, className = "" }: IHeading) => {
-  const baseStyles = `text-slate-700 ${capitalize}`;
+  const baseStyles = `text-slate-700 ${capitalize && "capitalize"}`;
 
   switch (variant) {
     case "h1":

@@ -4,12 +4,16 @@ import { Tag } from "../../Atomic/Tag";
 import { Heading } from "../../Atomic/Typography/Heading";
 import { Filter } from "../Filter";
 
-const PageHeader = () => {
+const PageHeader = ({ candidates }: { candidates: number }) => {
   return (
     <div className="flex justify-between items-center">
       {/* left content */}
       <div className="flex flex-row items-center">
-        <Heading variant="h1" label="32 Candidates" capitalize />
+        <Heading
+          variant="h1"
+          label={`${candidates} ${candidates > 1 ? "candidates" : "candidate"}`}
+          capitalize
+        />
         <Tag label="+1 new hire" />
         <Filter />
       </div>

@@ -34,7 +34,7 @@ const CandidatesPage = () => {
   
   return (
     <>
-      <PageHeader />
+      <PageHeader candidates={candidates.length} />
       <DataTable data={candidates} />
     </>
   );
