@@ -38,7 +38,7 @@ const Stage = ({ currentStage }: IStage) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-20">
       <select
         name="stage"
         onChange={(e) => setStagePosition(parseInt(e.target.value))}

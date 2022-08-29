@@ -1,11 +1,11 @@
+// TYPES
+import { CandidatePositionType } from "../../../../../types/types";
+
 // COMPONENTS
 import { Text } from "../../../../Atomic/Typography/Text";
 
 interface IPosition {
-  position: {
-    role: string;
-    team: string;
-  };
+  position: CandidatePositionType;
 }
 
 const Position = ({ position }: IPosition) => {
