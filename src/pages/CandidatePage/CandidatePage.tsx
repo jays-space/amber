@@ -45,14 +45,16 @@ const CandidatePage = () => {
         {/* application details */}
 
         {/* candidate details */}
-        <div className="mt-20 px-4">
+        <div className="mt-5 lg:mt-20 lg:px-4">
           <Application candidate={candidate} />
-          <div className="mt-10 mb-2 grid grid-flow-row gap-6">
-            <div className="grid grid-cols-2 gap-6">
+          
+          <div className="mt-16 lg:mt-10 mb-2 grid grid-flow-row gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <BasicInfo candidate={candidate} />
               <LocationInfo candidate={candidate} />
             </div>
 
+            {/* login info */}
             <Login candidate={candidate} />
           </div>
         </div>

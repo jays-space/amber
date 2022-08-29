@@ -16,8 +16,8 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }: ISidebar) => {
   return (
     <div
       className={`${
-        isCollapsed ? "w-20 p-4" : "w-1/6 p-6"
-      }  bg-slate-900 transform ease-out duration-300 cursor-pointer`}
+        isCollapsed ? "w-20 p-4" : "md:w-1/4 lg:w-1/6 p-6"
+      } h-screen bg-slate-900 transform ease-out duration-300 cursor-pointer hidden md:block z-50`}
     >
       <div className="relative mt-2 mb-12 px-4">
         <img
@@ -28,7 +28,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }: ISidebar) => {
 
         {/* toggle sidebar button */}
         <div
-          className={`absolute -top-2 ${
+          className={`absolute -top-2 hidden md:flex ${
             isCollapsed ? "-right-9" : "-right-11"
           } w-10 aspect-square flex items-center justify-center rounded-full bg-yellow-400 hover:bg-yellow-300 active:bg-slate-200 transform ease-out duration-100 cursor-pointer`}
           onClick={() => setIsCollapsed((v) => !v)}

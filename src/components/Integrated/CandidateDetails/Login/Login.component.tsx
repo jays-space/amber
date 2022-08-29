@@ -12,42 +12,60 @@ const Login = ({ candidate }: { candidate: CandidateType }) => {
 
   return (
     <div className="mt-6">
-      <div className="flex items-center mb-4">
-        {/* <Heading
-          variant="h4"
-          label="login info"
-          capitalize
-          className="mb-2 mr-4"
-        /> */}
+      <div className="md:flex items-center mb-4">
         <Button
           variant="secondary"
           icon={isVisible ? "visible" : "hidden"}
           label={isVisible ? "hide login info" : "show login info"}
           onClick={() => setIsVisible((v) => !v)}
         />
-        {/* <div className="cursor-pointer" onClick={() => setIsVisible((v) => !v)}>
-          {isVisible ? <Text>hide</Text> : <Text>show</Text>}
-        </div> */}
       </div>
 
       {/* account */}
       {isVisible && (
-        <div className="p-4 grid grid-cols-3 gap-6 border rounded-md">
-          <Detail lowercase label="uuid" content={[candidate.login.uuid]} />
+        <div className="mt-10 md:mt-0 md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:border rounded-md">
+          <Detail
+            lowercase
+            label="uuid"
+            content={[candidate.login.uuid]}
+            className="!text-sm !md:text-base break-all"
+          />
           <Detail
             lowercase
             label="username"
             content={[candidate.login.username]}
+            className="!text-sm !md:text-base break-all"
           />
           <Detail
             lowercase
             label="password"
             content={[candidate.login.password]}
+            className="!text-sm !md:text-base break-all"
           />
-          <Detail lowercase label="salt" content={[candidate.login.salt]} />
-          <Detail lowercase label="md5" content={[candidate.login.md5]} />
-          <Detail lowercase label="sha1" content={[candidate.login.sha1]} />
-          <Detail lowercase label="sha256" content={[candidate.login.sha256]} />
+          <Detail
+            lowercase
+            label="salt"
+            content={[candidate.login.salt]}
+            className="!text-sm !md:text-base break-all"
+          />
+          <Detail
+            lowercase
+            label="md5"
+            content={[candidate.login.md5]}
+            className="!text-sm !md:text-base break-all"
+          />
+          <Detail
+            lowercase
+            label="sha1"
+            content={[candidate.login.sha1]}
+            className="!text-sm !md:text-base break-all"
+          />
+          <Detail
+            lowercase
+            label="sha256"
+            content={[candidate.login.sha256]}
+            className="!text-sm !md:text-base break-all"
+          />
         </div>
       )}
     </div>

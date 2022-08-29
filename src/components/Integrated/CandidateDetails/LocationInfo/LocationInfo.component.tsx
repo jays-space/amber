@@ -7,10 +7,10 @@ import { Detail } from "../../Detail";
 
 const LocationInfo = ({ candidate }: { candidate: CandidateType }) => {
   return (
-    <div>
-      <Heading variant="h4" label="address" capitalize className="mb-2" />
-      <div className="grid grid-cols-2 gap-6 border rounded-md">
-        <div className="p-4 grid grid-cols-1 gap-6">
+    <div className="mt-10 lg:mt-0">
+      <Heading variant="h4" label="address" capitalize className="mb-6 md:mb-2" />
+      <div className="grid md:grid-cols-2 gap-6 md:border rounded-md">
+        <div className="md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
           <Detail
             label="street address"
             content={[

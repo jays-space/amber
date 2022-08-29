@@ -13,14 +13,23 @@ const User = ({ name, avatar, candidate = false }: IUsername) => {
       <img
         src={avatar}
         alt={name}
-        className="w-10 mr-4 aspect-square rounded-full"
+        className={`w-16 lg:w-10 mr-4 aspect-square rounded-full ${
+          !candidate && "hidden lg:flex"
+        }`}
       />
-      <Text
-        strong
-        className="pr-4 text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
-      >
-        {name}
-      </Text>
+
+      <div className="flex flex-col overflow-hidden">
+        {!candidate && (
+          <Text className={`flex lg:hidden capitalize`}>owner</Text>
+        )}
+
+        <Text
+          strong
+          className={`pr-4 text-sm md:text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden`}
+        >
+          {name}
+        </Text>
+      </div>
     </div>
   );
 };

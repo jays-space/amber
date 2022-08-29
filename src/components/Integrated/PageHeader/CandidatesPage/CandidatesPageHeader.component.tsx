@@ -8,7 +8,7 @@ const CandidatesPageHeader = ({ candidates }: { candidates: number }) => {
   return (
     <div className="flex justify-between items-center">
       {/* left content */}
-      <div className="flex flex-row items-center">
+      <div className="w-full flex flex-row justify-between lg:justify-start items-center">
         <Heading
           variant="h1"
           label={`${candidates} ${candidates > 1 ? "candidates" : "candidate"}`}
@@ -19,7 +19,7 @@ const CandidatesPageHeader = ({ candidates }: { candidates: number }) => {
       </div>
 
       {/* right content */}
-      <div className="flex flex-row items-center">
+      <div className="hidden lg:flex flex-row items-center">
         <Button variant="icon-dark" icon="more" />
 
         {/* divider */}

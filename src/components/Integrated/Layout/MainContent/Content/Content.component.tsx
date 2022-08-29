@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 // Pages that are added as routes in the router will be rendered here => app.tsx
 const Content = () => {
   return (
-    <main className="p-8 px-20">
+    <main className="p-4 md:p-8 md:px-5 lg:px-10 xl:px-14 2xl:px-20">
       <Outlet />
     </main>
   );

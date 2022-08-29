@@ -44,7 +44,7 @@ const Stage = ({ currentStage, select }: IStage) => {
         <select
           name="stage"
           onChange={(e) => setStagePosition(parseInt(e.target.value))}
-          className="text-lg font-semibold text-slate-700 capitalize after:absolute after:top-3 after:right-3 after:w-0 after:h-0 after:border-none focus-visible:outline-none"
+          className="w-full lg:w-fit text-lg font-semibold text-slate-700 capitalize after:absolute after:top-3 after:right-3 after:w-0 after:h-0 after:border-none focus-visible:outline-none"
         >
           {stages.map((stage) => (
             <option

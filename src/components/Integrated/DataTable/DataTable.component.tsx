@@ -11,7 +11,7 @@ import { TableRow } from "./TableRow";
 const DataTable = ({ data }: { data: CandidateType[] }) => {
   return (
     <div className="mt-10">
-      <div className="grid grid-cols-7 py-3 px-4 rounded-lg shadow-lg bg-white">
+      <div className="hidden lg:grid grid-cols-7 py-3 px-4 rounded-lg shadow-lg bg-white">
         {columns.map((col) => (
           <div key={col.key} className="col-span-1">
             <Text className="text-sm font-bold !tracking-wide capitalize">

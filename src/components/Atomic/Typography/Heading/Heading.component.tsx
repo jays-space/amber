@@ -19,7 +19,7 @@ const Heading = ({ variant, label, capitalize, className = "" }: IHeading) => {
   switch (variant) {
     case "h1":
       return (
-        <h1 className={`${className} ${baseStyles} text-4xl font-semibold`}>
+        <h1 className={`${className} ${baseStyles} text-2xl lg:text-4xl font-semibold`}>
           {label}
         </h1>
       );

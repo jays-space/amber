@@ -10,7 +10,7 @@ const tabMenuOptions = [
 
 const TabMenu = () => {
   return (
-    <div className="flex">
+    <div className="hidden lg:flex">
       {tabMenuOptions.map((option) => (
         <div
           className={`px-6 py-4 cursor-pointer hover:bg-slate-50 transform ease-out delay-100 ${
