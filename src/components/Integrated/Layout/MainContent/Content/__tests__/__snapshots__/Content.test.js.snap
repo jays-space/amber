@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Content /> should render correctly 1`] = `
+<main
+  class="h-content p-4 md:p-8 md:px-5 lg:px-10 xl:px-14 2xl:px-20"
+/>
+`;

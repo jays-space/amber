@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stage /> should render correctly 1`] = `
+<div
+  class="relative z-20"
+  title="application-stage"
+>
+  <select
+    class="w-full lg:w-fit text-lg font-semibold text-slate-700 capitalize after:absolute after:top-3 after:right-3 after:w-0 after:h-0 after:border-none focus-visible:outline-none"
+    data-testid="stage-selector"
+    name="stage"
+  >
+    <option
+      class="p-10 text-lg"
+      data-testid="stage-option"
+      value="1"
+    >
+      new applied
+    </option>
+    <option
+      class="p-10 text-lg"
+      data-testid="stage-option"
+      value="2"
+    >
+      screening
+    </option>
+    <option
+      class="p-10 text-lg"
+      data-testid="stage-option"
+      value="3"
+    >
+      code challenge
+    </option>
+    <option
+      class="p-10 text-lg"
+      data-testid="stage-option"
+      value="4"
+    >
+      interview
+    </option>
+    <option
+      class="p-10 text-lg"
+      data-testid="stage-option"
+      value="5"
+    >
+      hire
+    </option>
+  </select>
+  <div
+    class=" mt-2 flex"
+  >
+    <div
+      class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-orange-500"
+    >
+      <p
+        class="tracking-wide  text-slate-700 text-white"
+        data-testid="paragraph"
+      >
+        1
+      </p>
+    </div>
+    <div
+      class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-orange-500"
+    >
+      <p
+        class="tracking-wide  text-slate-700 text-white"
+        data-testid="paragraph"
+      >
+        2
+      </p>
+    </div>
+    <div
+      class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-orange-500"
+    >
+      <p
+        class="tracking-wide  text-slate-700 text-white"
+        data-testid="paragraph"
+      >
+        3
+      </p>
+    </div>
+    <div
+      class="px-3 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-neutral-300"
+    />
+    <div
+      class="px-3 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-neutral-300"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabMenu /> should render correctly 1`] = `
+<div
+  class="hidden lg:flex"
+  title="tab-menu"
+>
+  <div
+    class="px-6 py-4 cursor-pointer hover:bg-slate-50 transform ease-out delay-100 border-b-2 border-yellow-500"
+  >
+    <p
+      class="tracking-wide  text-slate-700 font-bold text-sm uppercase"
+      data-testid="paragraph"
+    >
+      details
+    </p>
+  </div>
+  <div
+    class="px-6 py-4 cursor-pointer hover:bg-slate-50 transform ease-out delay-100 false"
+  >
+    <p
+      class="tracking-wide  text-slate-700 opacity-80 text-sm uppercase"
+      data-testid="paragraph"
+    >
+      resume
+    </p>
+  </div>
+  <div
+    class="px-6 py-4 cursor-pointer hover:bg-slate-50 transform ease-out delay-100 false"
+  >
+    <p
+      class="tracking-wide  text-slate-700 opacity-80 text-sm uppercase"
+      data-testid="paragraph"
+    >
+      hiring pipeline
+    </p>
+  </div>
+  <div
+    class="px-6 py-4 cursor-pointer hover:bg-slate-50 transform ease-out delay-100 false"
+  >
+    <p
+      class="tracking-wide  text-slate-700 opacity-80 text-sm uppercase"
+      data-testid="paragraph"
+    >
+      interviews
+    </p>
+  </div>
+</div>
+`;

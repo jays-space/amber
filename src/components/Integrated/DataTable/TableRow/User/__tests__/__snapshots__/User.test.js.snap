@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<User /> should render correctly 1`] = `
+<div
+  class="flex items-center"
+  title="user-details"
+>
+  <img
+    alt="john doe"
+    class="w-16 lg:w-10 mr-4 aspect-square rounded-full hidden lg:flex"
+    src="https://randomuser.me/api/portraits/women/92.jpg"
+  />
+  <div
+    class="flex flex-col overflow-hidden"
+  >
+    <p
+      class="tracking-wide  text-slate-700 flex lg:hidden capitalize"
+      data-testid="paragraph"
+    >
+      owner
+    </p>
+    <p
+      class="tracking-wide  text-cyan-900 font-semibold pr-4 text-sm md:text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+      data-testid="paragraph"
+    >
+      john doe
+    </p>
+  </div>
+</div>
+`;

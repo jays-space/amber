@@ -8,6 +8,12 @@ interface IStage {
   select?: boolean;
 }
 
+/**
+ * @param currentStage -> candidate stage of application
+ * @param select -> determines whether the user is bale to update the stage data
+ * @returns datable component rendering current stage of application
+ */
+
 const stages = [
   { name: "new applied", position: 1 },
   { name: "screening", position: 2 },
@@ -17,6 +23,7 @@ const stages = [
 ];
 
 const Stage = ({ currentStage, select }: IStage) => {
+  // set initial stage based on data from db
   const [stagePosition, setStagePosition] = useState<number>(currentStage);
 
   const getStageColor = (stagePosition: number) => {
@@ -33,24 +40,28 @@ const Stage = ({ currentStage, select }: IStage) => {
       case 5:
         return "bg-yellow-500";
 
+      case 1:
       default:
         return "bg-lime-800 bg-opacity-60";
     }
   };
 
   return (
-    <div className="relative z-20">
+    <div title="application-stage" className="relative z-20">
       {select && (
         <select
+          data-testid="stage-selector"
           name="stage"
-          onChange={(e) => setStagePosition(parseInt(e.target.value))}
+          onChange={(e) => setStagePosition(parseInt(e.target.value))} // set the selected position into state
           className="w-full lg:w-fit text-lg font-semibold text-slate-700 capitalize after:absolute after:top-3 after:right-3 after:w-0 after:h-0 after:border-none focus-visible:outline-none"
         >
+          {/* render into select all possible stages */}
           {stages.map((stage) => (
             <option
+              data-testid="stage-option"
               key={stage.position}
               value={stage.position}
-              selected={currentStage === stage.position}
+              defaultValue={currentStage}
               className="p-10 text-lg"
             >
               {stage.name}
@@ -59,9 +70,13 @@ const Stage = ({ currentStage, select }: IStage) => {
         </select>
       )}
 
+      {/* renders a graphic representing the applicant's progression */}
       <div className=" mt-2 flex">
         {stages.map((stage) => {
+          // render all possible stages
+          // for each stage, check if it is less than the current stage
           if (stage.position <= stagePosition) {
+            // if so, render the stage color and number
             return (
               <div
                 key={stage.position}
@@ -73,6 +88,7 @@ const Stage = ({ currentStage, select }: IStage) => {
               </div>
             );
           } else {
+            // else render a black stage (gray)
             return (
               <div
                 key={stage.position}

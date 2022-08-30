@@ -17,15 +17,20 @@ import { Button } from "../../../Atomic/Button";
 // UTILS
 import { getFormattedDate } from "../../../../utils/dateTime.utils";
 
-interface ITableRow {
+interface ITableRows {
   data: CandidateType[];
 }
 
-const TableRow = ({ data }: ITableRow) => {
+/**
+ * @param data -> candidate
+ * @returns data table rows with candidate details 
+ */
+
+const TableRows = ({ data }: ITableRows) => {
   const navigate = useNavigate();
 
   return (
-    <div className="my-6 rounded-lg shadow-lg bg-white">
+    <div data-testid="table-row" className="my-6 rounded-lg shadow-lg bg-white">
       {data.map((row) => (
         <div
           key={row.login.uuid}
@@ -56,18 +61,17 @@ const TableRow = ({ data }: ITableRow) => {
           <User name={recruiter.name} avatar={recruiter.avatar} />
 
           {/* see more button */}
-          <div
-            onClick={() => navigate(`${row.name.first}-${row.name.last}`)}
-            className="hidden group lg:flex items-center cursor-pointer"
-          >
-            <Text className="group-hover:border-b-2 border-b-slate-500 capitalize">
-              See more
-            </Text>
+          <div className="hidden w-full lg:flex">
+            <Button
+              variant="primary"
+              label="See more"
+              onClick={() => navigate(`${row.name.first}-${row.name.last}`)}
+            />
           </div>
 
           <div className="lg:hidden">
             <Button
-              variant="secondary"
+              variant="primary"
               label="see more"
               onClick={() => navigate(`${row.name.first}-${row.name.last}`)}
             />
@@ -78,4 +82,4 @@ const TableRow = ({ data }: ITableRow) => {
   );
 };
 
-export default TableRow;
+export default TableRows;

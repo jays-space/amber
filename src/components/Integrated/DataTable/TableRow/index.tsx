@@ -1,1 +1,1 @@
-export { default as TableRow } from "./TableRow.component";
+export { default as TableRows } from "./TableRows.component";

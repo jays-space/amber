@@ -28,9 +28,9 @@ import { CgSpinnerTwoAlt } from "react-icons/cg";
 import { IconNamesType } from "../../../types/types";
 
 /**
- * @param name: name of icon to return
- * @param size: icon size
- * @param className (optional): additional classes to be added
+ * @param name -> name of icon to return
+ * @param size -> icon size
+ * @param className (optional) -> additional classes to be added
  *
  * @returns icon component depending on icon name
  */
@@ -39,24 +39,23 @@ interface IIcon {
   name: IconNamesType;
   size?: number;
   className?: string;
-  onClick?: () => void;
 }
 
-const Icon = ({
-  name,
-  size = 24,
-  className = "",
-  onClick = () => {},
-}: IIcon) => {
+const Icon = ({ name, size = 24, className = "" }: IIcon) => {
   switch (name) {
     case "filter":
       return (
-        <BiFilterAlt size={size} className={`text-slate-500 ${className}`} />
+        <BiFilterAlt
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "download":
       return (
         <AiOutlineDownload
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
         />
@@ -65,41 +64,70 @@ const Icon = ({
     case "print":
       return (
         <AiOutlinePrinter
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
         />
       );
 
     case "add":
-      return <IoMdAdd size={size} className={`text-slate-500 ${className}`} />;
+      return (
+        <IoMdAdd
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
 
     case "more":
       return (
-        <FiMoreVertical size={size} className={`text-slate-500 ${className}`} />
+        <FiMoreVertical
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "home":
       return (
-        <BiHomeAlt size={size} className={`text-slate-500 ${className}`} />
+        <BiHomeAlt
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "inbox":
-      return <FiInbox size={size} className={`text-slate-500 ${className}`} />;
+      return (
+        <FiInbox
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
 
     case "calendar":
       return (
         <AiOutlineSchedule
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
         />
       );
 
     case "task":
-      return <FaTasks size={size} className={`text-slate-500 ${className}`} />;
+      return (
+        <FaTasks
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
 
     case "project":
       return (
         <FaProjectDiagram
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
         />
@@ -107,18 +135,35 @@ const Icon = ({
 
     case "new":
       return (
-        <SiBmcsoftware size={size} className={`text-slate-500 ${className}`} />
+        <SiBmcsoftware
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "person":
-      return <BsPerson size={size} className={`text-slate-500 ${className}`} />;
+      return (
+        <BsPerson
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
 
     case "people":
-      return <BsPeople size={size} className={`text-slate-500 ${className}`} />;
+      return (
+        <BsPeople
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
+      );
 
     case "report":
       return (
         <AiOutlinePieChart
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
         />
@@ -127,6 +172,7 @@ const Icon = ({
     case "settings":
       return (
         <RiSettings2Line
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
         />
@@ -135,6 +181,7 @@ const Icon = ({
     case "minimize":
       return (
         <TiArrowMinimise
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
         />
@@ -142,12 +189,17 @@ const Icon = ({
 
     case "notification":
       return (
-        <FaRegBell size={size} className={`text-slate-500 ${className}`} />
+        <FaRegBell
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "message":
       return (
         <BiMessageSquareDetail
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
         />
@@ -155,66 +207,82 @@ const Icon = ({
 
     case "email":
       return (
-        <HiOutlineMail size={size} className={`text-slate-500 ${className}`} />
+        <HiOutlineMail
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "previous":
       return (
-        <BiChevronLeft size={size} className={`text-slate-500 ${className}`} />
+        <BiChevronLeft
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "next":
       return (
-        <BiChevronRight size={size} className={`text-slate-500 ${className}`} />
+        <BiChevronRight
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "back":
       return (
-        <BsArrowLeft size={size} className={`text-slate-500 ${className}`} />
+        <BsArrowLeft
+          data-testid={`icon-${name}`}
+          size={size}
+          className={`text-slate-500 ${className}`}
+        />
       );
 
     case "visible":
       return (
         <AiOutlineEye
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
-          onClick={onClick}
         />
       );
 
     case "hidden":
       return (
         <AiOutlineEyeInvisible
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
-          onClick={onClick}
         />
       );
 
     case "search":
       return (
         <BsSearch
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
-          onClick={onClick}
         />
       );
 
     case "menu":
       return (
         <AiOutlineMenu
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
-          onClick={onClick}
         />
       );
 
     case "spinner":
       return (
         <CgSpinnerTwoAlt
+          data-testid={`icon-${name}`}
           size={size}
           className={`text-slate-500 ${className}`}
-          onClick={onClick}
         />
       );
 

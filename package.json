@@ -11,7 +11,7 @@
     "@types/node": "^16.11.56",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "rc-table": "^7.27.1",
+    "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -23,13 +23,43 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!<rootDir>/src/App.tsx",
+      "!<rootDir>/src/App.css",
+      "!<rootDir>/src/index.tsx",
+      "!<rootDir>/src/index.css",
+      "!<rootDir>/src/setupTests.ts",
+      "!<rootDir>/src/constants/*",
+      "!<rootDir>/src/types/*",
+      "!<rootDir>/src/utils/*",
+      "!<rootDir>/src/components/*/*/__tests__/__snapshots__/*",
+      "!<rootDir>/src/components/*/*/*/__tests__/__snapshots__/*",
+      "!<rootDir>/src/components/*/*/*/*/__tests__/__snapshots__/*",
+      "!<rootDir>/src/pages/*/__tests__/__snapshots__/*",
+      "!<rootDir>/src/pages",
+      "!<rootDir>/src"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "html",
+      "text"
     ]
   },
   "browserslist": {

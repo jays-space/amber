@@ -3,14 +3,28 @@ import { Button } from "../../../Atomic/Button";
 import { Heading } from "../../../Atomic/Typography/Heading";
 import { Filter } from "../../Filter";
 
-const CandidatesPageHeader = ({ candidates }: { candidates: number }) => {
+/**
+ * @param noOfCandidates -> number of candidates returned by db
+ * @returns header component with dynamic candidates count
+ */
+
+const CandidatesPageHeader = ({
+  noOfCandidates,
+}: {
+  noOfCandidates: number;
+}) => {
   return (
-    <div className="flex justify-between items-center">
+    <div
+      data-testid="candidates-page-header"
+      className="flex justify-between items-center"
+    >
       {/* left content */}
       <div className="w-full flex flex-1 flex-row justify-between lg:justify-start items-center">
         <Heading
           variant="h1"
-          label={`${candidates} ${candidates > 1 ? "candidates" : "candidate"}`}
+          label={`${noOfCandidates} ${
+            noOfCandidates > 1 ? "candidates" : "candidate"
+          }`}
           capitalize
           className="mr-10"
         />

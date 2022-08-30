@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CandidatePageHeader /> should render correctly 1`] = `
+<div
+  class="flex flex-col lg:flex-row justify-between items-center my-10 lg:my-0"
+  data-testid="candidate-page-header"
+>
+  <div
+    class="flex flex-col lg:flex-row items-center"
+  >
+    <div
+      class="hidden lg:flex"
+    >
+      <button
+        class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 w-11 aspect-square !p-2 bg-slate-500  active:bg-slate-600"
+        data-testid="button-icon-dark"
+      >
+        <svg
+          class="text-slate-500 !text-white"
+          data-testid="icon-back"
+          fill="currentColor"
+          height="24"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <img
+      alt="jane doe's avatar"
+      class="rounded-full mx-4"
+      src="https://randomuser.me/api/portraits/women/16.jpg"
+    />
+    <div
+      class="flex flex-col justify-center items-center"
+    >
+      <div
+        class="flex items-center gap-2"
+      >
+        <h3
+          class=" text-slate-700 undefined text-2xl font-bold"
+        >
+          jane doe
+        </h3>
+        <p
+          class="tracking-wide  text-slate-700 capitalize opacity-75"
+          data-testid="paragraph"
+        >
+          (ZA)
+        </p>
+      </div>
+      <p
+        class="tracking-wide  text-slate-700 capitalize opacity-75"
+        data-testid="paragraph"
+      >
+        dev team ~ fullstack developer
+      </p>
+      <div
+        class="relative z-20"
+        title="application-stage"
+      >
+        <div
+          class=" mt-2 flex"
+        >
+          <div
+            class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-purple-500"
+          >
+            <p
+              class="tracking-wide  text-slate-700 text-white"
+              data-testid="paragraph"
+            >
+              1
+            </p>
+          </div>
+          <div
+            class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-purple-500"
+          >
+            <p
+              class="tracking-wide  text-slate-700 text-white"
+              data-testid="paragraph"
+            >
+              2
+            </p>
+          </div>
+          <div
+            class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-purple-500"
+          >
+            <p
+              class="tracking-wide  text-slate-700 text-white"
+              data-testid="paragraph"
+            >
+              3
+            </p>
+          </div>
+          <div
+            class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-purple-500"
+          >
+            <p
+              class="tracking-wide  text-slate-700 text-white"
+              data-testid="paragraph"
+            >
+              4
+            </p>
+          </div>
+          <div
+            class="px-3 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-neutral-300"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="hidden lg:flex"
+  >
+    <button
+      class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 w-11 aspect-square !p-2 bg-white hover:bg-slate-50 active:bg-slate-200"
+      data-testid="button-icon-light"
+    >
+      <svg
+        class="text-slate-500 text-slate-700"
+        data-testid="icon-previous"
+        fill="currentColor"
+        height="24"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+        />
+      </svg>
+    </button>
+    <button
+      class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 w-11 aspect-square !p-2 bg-white hover:bg-slate-50 active:bg-slate-200"
+      data-testid="button-icon-light"
+    >
+      <svg
+        class="text-slate-500 text-slate-700"
+        data-testid="icon-next"
+        fill="currentColor"
+        height="24"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+        />
+      </svg>
+    </button>
+    <button
+      class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 !py-1.5 text-cyan-800 border-2 border-cyan-800 border-opacity-75  active:border-cyan-900"
+      data-testid="button-secondary"
+    >
+      <svg
+        class="text-slate-500 mr-2 !text-cyan-800"
+        data-testid="icon-message"
+        fill="currentColor"
+        height="24"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 2H8C4.691 2 2 4.691 2 8v13a1 1 0 0 0 1 1h13c3.309 0 6-2.691 6-6V8c0-3.309-2.691-6-6-6zm4 14c0 2.206-1.794 4-4 4H4V8c0-2.206 1.794-4 4-4h8c2.206 0 4 1.794 4 4v8z"
+        />
+        <path
+          d="M7 9h10v2H7zm0 4h7v2H7z"
+        />
+      </svg>
+      send message
+    </button>
+    <button
+      class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 !py-1.5 text-cyan-800 border-2 border-cyan-800 border-opacity-75  active:border-cyan-900"
+      data-testid="button-secondary"
+    >
+      <svg
+        class="text-slate-500 mr-2 !text-cyan-800"
+        data-testid="icon-email"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+      send email
+    </button>
+  </div>
+</div>
+`;

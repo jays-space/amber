@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Location /> should render correctly 1`] = `
+<div
+  title="candidate-city-country"
+>
+  <span>
+    <p
+      class="tracking-wide  text-cyan-900 font-semibold w-10/12 text-lg whitespace-nowrap text-ellipsis overflow-hidden capitalize"
+      data-testid="paragraph"
+    >
+      johannesburg
+    </p>
+  </span>
+  <span>
+    <p
+      class="tracking-wide  text-slate-700 capitalize opacity-75"
+      data-testid="paragraph"
+    >
+      south africa
+    </p>
+  </span>
+</div>
+`;

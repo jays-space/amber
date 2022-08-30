@@ -1,0 +1,461 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CandidatesPage /> should render correctly 1`] = `
+<div
+  data-testid="candidates-page"
+>
+  <div
+    class="flex justify-between items-center"
+    data-testid="candidates-page-header"
+  >
+    <div
+      class="w-full flex flex-1 flex-row justify-between lg:justify-start items-center"
+    >
+      <h1
+        class="mr-10 text-slate-700 capitalize text-2xl lg:text-4xl font-semibold"
+      >
+        1 candidate
+      </h1>
+      <div
+        class="flex justify-center items-center py-2 px-6 text-slate-500 bg-white rounded-md"
+        title="filter-candidates"
+      >
+        <svg
+          class="text-slate-500 mr-2"
+          data-testid="icon-filter"
+          fill="currentColor"
+          height="24"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 3H5a1 1 0 0 0-1 1v2.59c0 .523.213 1.037.583 1.407L10 13.414V21a1.001 1.001 0 0 0 1.447.895l4-2c.339-.17.553-.516.553-.895v-5.586l5.417-5.417c.37-.37.583-.884.583-1.407V4a1 1 0 0 0-1-1zm-6.707 9.293A.996.996 0 0 0 14 13v5.382l-2 1V13a.996.996 0 0 0-.293-.707L6 6.59V5h14.001l.002 1.583-5.71 5.71z"
+          />
+        </svg>
+        <p
+          class="tracking-wide  text-slate-700 capitalize"
+          data-testid="paragraph"
+        >
+          filter
+        </p>
+      </div>
+    </div>
+    <div
+      class="hidden lg:flex flex-row items-center justify-end"
+    >
+      <button
+        class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 w-11 aspect-square !p-2 bg-slate-500  active:bg-slate-600"
+        data-testid="button-icon-dark"
+      >
+        <svg
+          class="text-slate-500 !text-white"
+          data-testid="icon-more"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="1"
+          />
+          <circle
+            cx="12"
+            cy="5"
+            r="1"
+          />
+          <circle
+            cx="12"
+            cy="19"
+            r="1"
+          />
+        </svg>
+      </button>
+      <span
+        class="h-8 w-0.5 mx-6 bg-slate-600 rounded-lg opacity-40"
+      />
+      <button
+        class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 w-11 aspect-square !p-2 bg-white hover:bg-slate-50 active:bg-slate-200"
+        data-testid="button-icon-light"
+      >
+        <svg
+          class="text-slate-500 text-slate-700"
+          data-testid="icon-download"
+          fill="currentColor"
+          height="24"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M505.7 661a8 8 0 0 0 12.6 0l112-141.7c4.1-5.2.4-12.9-6.3-12.9h-74.1V168c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v338.3H400c-6.7 0-10.4 7.7-6.3 12.9l112 141.8zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z"
+          />
+        </svg>
+      </button>
+      <button
+        class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 w-11 aspect-square !p-2 bg-white hover:bg-slate-50 active:bg-slate-200"
+        data-testid="button-icon-light"
+      >
+        <svg
+          class="text-slate-500 text-slate-700"
+          data-testid="icon-print"
+          fill="currentColor"
+          height="24"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M820 436h-40c-4.4 0-8 3.6-8 8v40c0 4.4 3.6 8 8 8h40c4.4 0 8-3.6 8-8v-40c0-4.4-3.6-8-8-8zm32-104H732V120c0-4.4-3.6-8-8-8H300c-4.4 0-8 3.6-8 8v212H172c-44.2 0-80 35.8-80 80v328c0 17.7 14.3 32 32 32h168v132c0 4.4 3.6 8 8 8h424c4.4 0 8-3.6 8-8V772h168c17.7 0 32-14.3 32-32V412c0-44.2-35.8-80-80-80zM360 180h304v152H360V180zm304 664H360V568h304v276zm200-140H732V500H292v204H160V412c0-6.6 5.4-12 12-12h680c6.6 0 12 5.4 12 12v292z"
+          />
+        </svg>
+      </button>
+      <div
+        class="flex flex-1"
+      >
+        <button
+          class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 !py-1.5 text-cyan-800 border-2 border-cyan-800 border-opacity-75  active:border-cyan-900"
+          data-testid="button-secondary"
+        >
+          <svg
+            class="text-slate-500 mr-2 !text-cyan-800"
+            data-testid="icon-add"
+            fill="currentColor"
+            height="24"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z"
+            />
+          </svg>
+          add candidate
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-10"
+    title="candidates-table"
+  >
+    <div
+      class="hidden lg:grid grid-cols-7 py-3 px-4 rounded-lg shadow-lg bg-white"
+    >
+      <div
+        class="col-span-1"
+        data-testid="dataTable-column-item"
+      >
+        <p
+          class="tracking-wide  text-slate-700 text-sm font-bold !tracking-wide capitalize"
+          data-testid="paragraph"
+        >
+          candidate name
+        </p>
+      </div>
+      <div
+        class="col-span-1"
+        data-testid="dataTable-column-item"
+      >
+        <p
+          class="tracking-wide  text-slate-700 text-sm font-bold !tracking-wide capitalize"
+          data-testid="paragraph"
+        >
+          location
+        </p>
+      </div>
+      <div
+        class="col-span-1"
+        data-testid="dataTable-column-item"
+      >
+        <p
+          class="tracking-wide  text-slate-700 text-sm font-bold !tracking-wide capitalize"
+          data-testid="paragraph"
+        >
+          stages
+        </p>
+      </div>
+      <div
+        class="col-span-1"
+        data-testid="dataTable-column-item"
+      >
+        <p
+          class="tracking-wide  text-slate-700 text-sm font-bold !tracking-wide capitalize"
+          data-testid="paragraph"
+        >
+          position
+        </p>
+      </div>
+      <div
+        class="col-span-1"
+        data-testid="dataTable-column-item"
+      >
+        <p
+          class="tracking-wide  text-slate-700 text-sm font-bold !tracking-wide capitalize"
+          data-testid="paragraph"
+        >
+          application date
+        </p>
+      </div>
+      <div
+        class="col-span-1"
+        data-testid="dataTable-column-item"
+      >
+        <p
+          class="tracking-wide  text-slate-700 text-sm font-bold !tracking-wide capitalize"
+          data-testid="paragraph"
+        >
+          owner
+        </p>
+      </div>
+      <div
+        class="col-span-1"
+        data-testid="dataTable-column-item"
+      >
+        <p
+          class="tracking-wide  text-slate-700 text-sm font-bold !tracking-wide capitalize"
+          data-testid="paragraph"
+        >
+          actions
+        </p>
+      </div>
+    </div>
+    <div
+      class="my-6 rounded-lg shadow-lg bg-white"
+      data-testid="table-row"
+    >
+      <div
+        class="grid grid-rows-4 md:grid-rows-1 gap-y-10 md:grid-cols-2 lg:grid-cols-7 py-4 px-4 border-b last-of-type:border-none lg:hover:bg-slate-100 transform ease-out duration-100"
+      >
+        <div
+          class="flex items-center"
+          title="user-details"
+        >
+          <img
+            alt="Romana Francois"
+            class="w-16 lg:w-10 mr-4 aspect-square rounded-full false"
+            src="https://randomuser.me/api/portraits/thumb/women/27.jpg"
+          />
+          <div
+            class="flex flex-col overflow-hidden"
+          >
+            <p
+              class="tracking-wide  text-cyan-900 font-semibold pr-4 text-sm md:text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+              data-testid="paragraph"
+            >
+              Romana Francois
+            </p>
+          </div>
+        </div>
+        <div
+          title="candidate-city-country"
+        >
+          <span>
+            <p
+              class="tracking-wide  text-cyan-900 font-semibold w-10/12 text-lg whitespace-nowrap text-ellipsis overflow-hidden capitalize"
+              data-testid="paragraph"
+            >
+              Brütten
+            </p>
+          </span>
+          <span>
+            <p
+              class="tracking-wide  text-slate-700 capitalize opacity-75"
+              data-testid="paragraph"
+            >
+              Switzerland
+            </p>
+          </span>
+        </div>
+        <div
+          class="relative z-20"
+          title="application-stage"
+        >
+          <select
+            class="w-full lg:w-fit text-lg font-semibold text-slate-700 capitalize after:absolute after:top-3 after:right-3 after:w-0 after:h-0 after:border-none focus-visible:outline-none"
+            data-testid="stage-selector"
+            name="stage"
+          >
+            <option
+              class="p-10 text-lg"
+              data-testid="stage-option"
+              value="1"
+            >
+              new applied
+            </option>
+            <option
+              class="p-10 text-lg"
+              data-testid="stage-option"
+              value="2"
+            >
+              screening
+            </option>
+            <option
+              class="p-10 text-lg"
+              data-testid="stage-option"
+              value="3"
+            >
+              code challenge
+            </option>
+            <option
+              class="p-10 text-lg"
+              data-testid="stage-option"
+              value="4"
+            >
+              interview
+            </option>
+            <option
+              class="p-10 text-lg"
+              data-testid="stage-option"
+              value="5"
+            >
+              hire
+            </option>
+          </select>
+          <div
+            class=" mt-2 flex"
+          >
+            <div
+              class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-yellow-500"
+            >
+              <p
+                class="tracking-wide  text-slate-700 text-white"
+                data-testid="paragraph"
+              >
+                1
+              </p>
+            </div>
+            <div
+              class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-yellow-500"
+            >
+              <p
+                class="tracking-wide  text-slate-700 text-white"
+                data-testid="paragraph"
+              >
+                2
+              </p>
+            </div>
+            <div
+              class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-yellow-500"
+            >
+              <p
+                class="tracking-wide  text-slate-700 text-white"
+                data-testid="paragraph"
+              >
+                3
+              </p>
+            </div>
+            <div
+              class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-yellow-500"
+            >
+              <p
+                class="tracking-wide  text-slate-700 text-white"
+                data-testid="paragraph"
+              >
+                4
+              </p>
+            </div>
+            <div
+              class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-yellow-500"
+            >
+              <p
+                class="tracking-wide  text-slate-700 text-white"
+                data-testid="paragraph"
+              >
+                5
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          title="position-applied"
+        >
+          <span>
+            <p
+              class="tracking-wide  text-cyan-900 font-semibold w-10/12 text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+              data-testid="paragraph"
+            >
+              fullstack developer
+            </p>
+          </span>
+          <span>
+            <p
+              class="tracking-wide  text-slate-700 capitalize opacity-75"
+              data-testid="paragraph"
+            >
+              dev team
+            </p>
+          </span>
+        </div>
+        <p
+          class="tracking-wide  text-cyan-900 font-semibold text-lg"
+          data-testid="paragraph"
+        >
+          Wed, 28 Sept 2016
+        </p>
+        <div
+          class="flex items-center"
+          title="user-details"
+        >
+          <img
+            alt="duduzile hlongwane"
+            class="w-16 lg:w-10 mr-4 aspect-square rounded-full hidden lg:flex"
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQELG5uq0_LIug/profile-displayphoto-shrink_100_100/0/1637782454380?e=1667433600&v=beta&t=976dwrMZyY3VL1L48bQwAOvR730al8Ad2-vGvz4pgE8"
+          />
+          <div
+            class="flex flex-col overflow-hidden"
+          >
+            <p
+              class="tracking-wide  text-slate-700 flex lg:hidden capitalize"
+              data-testid="paragraph"
+            >
+              owner
+            </p>
+            <p
+              class="tracking-wide  text-cyan-900 font-semibold pr-4 text-sm md:text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+              data-testid="paragraph"
+            >
+              duduzile hlongwane
+            </p>
+          </div>
+        </div>
+        <div
+          class="hidden w-full lg:flex"
+        >
+          <button
+            class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 bg-yellow-400 active:bg-yellow-600"
+            data-testid="button-primary"
+          >
+            See more
+          </button>
+        </div>
+        <div
+          class="lg:hidden"
+        >
+          <button
+            class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 bg-yellow-400 active:bg-yellow-600"
+            data-testid="button-primary"
+          >
+            see more
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

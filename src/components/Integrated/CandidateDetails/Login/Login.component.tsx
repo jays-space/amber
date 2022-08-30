@@ -1,17 +1,23 @@
 import { useState } from "react";
 
 // TYPES
-import { CandidateType } from "../../../../types/types";
+import { CandidateAuthType } from "../../../../types/types";
 
 // COMPONENTS
 import { Detail } from "../../Detail";
 import { Button } from "../../../Atomic/Button";
 
-const Login = ({ candidate }: { candidate: CandidateType }) => {
+/**
+ * 
+ * @param authData -> candidate login data 
+ * @returns grid component with data
+ */
+
+const Login = ({ authData }: { authData: CandidateAuthType }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   return (
-    <div className="mt-6">
+    <div title="about-account" className="mt-6">
       <div className="md:flex items-center mb-4">
         <Button
           variant="secondary"
@@ -27,43 +33,43 @@ const Login = ({ candidate }: { candidate: CandidateType }) => {
           <Detail
             lowercase
             label="uuid"
-            content={[candidate.login.uuid]}
+            content={[authData.uuid]}
             className="!text-sm !md:text-base break-all"
           />
           <Detail
             lowercase
             label="username"
-            content={[candidate.login.username]}
+            content={[authData.username]}
             className="!text-sm !md:text-base break-all"
           />
           <Detail
             lowercase
             label="password"
-            content={[candidate.login.password]}
+            content={[authData.password]}
             className="!text-sm !md:text-base break-all"
           />
           <Detail
             lowercase
             label="salt"
-            content={[candidate.login.salt]}
+            content={[authData.salt]}
             className="!text-sm !md:text-base break-all"
           />
           <Detail
             lowercase
             label="md5"
-            content={[candidate.login.md5]}
+            content={[authData.md5]}
             className="!text-sm !md:text-base break-all"
           />
           <Detail
             lowercase
             label="sha1"
-            content={[candidate.login.sha1]}
+            content={[authData.sha1]}
             className="!text-sm !md:text-base break-all"
           />
           <Detail
             lowercase
             label="sha256"
-            content={[candidate.login.sha256]}
+            content={[authData.sha256]}
             className="!text-sm !md:text-base break-all"
           />
         </div>

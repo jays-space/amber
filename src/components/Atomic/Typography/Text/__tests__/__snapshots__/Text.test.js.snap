@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should render correctly 1`] = `
+<p
+  class="tracking-wide  text-slate-700 undefined"
+  data-testid="paragraph"
+>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus exercitationem unde dicta expedita a facilis quo, ad inventore molestiae dolorum?
+</p>
+`;

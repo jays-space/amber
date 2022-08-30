@@ -6,9 +6,17 @@ interface ILocation {
   country: string;
 }
 
+/**
+ *
+ * @param city -> candidate location city
+ * @param country -> candidate location country
+ *
+ * @returns datable component rendering location of candidate
+ */
+
 const Location = ({ city, country }: ILocation) => {
   return (
-    <div>
+    <div title="candidate-city-country">
       <span>
         <Text
           strong

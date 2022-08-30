@@ -12,15 +12,24 @@ interface ISidebar {
   setIsCollapsed: Dispatch<SetStateAction<boolean>>;
 }
 
+/**
+ * @param isCollapsed (optional): determines if sidebar is minimized
+ * @param setIsCollapsed: setter function
+ *
+ * @returns interactive sidebar user can minimize
+ */
+
 const Sidebar = ({ isCollapsed, setIsCollapsed }: ISidebar) => {
   return (
     <div
+      data-testid="sidebar"
       className={`${
         isCollapsed ? "w-20 p-4" : "md:w-1/4 lg:w-1/6 p-6"
       } bg-slate-900 transform ease-out duration-300 cursor-pointer hidden md:block z-50`}
     >
       <div className="relative mt-2 mb-12 px-4">
         <img
+          data-testid="logo"
           src="/logo.png"
           alt="amber software logo"
           className={`${isCollapsed ? "opacity-0" : "opacity-100"}`}
@@ -28,6 +37,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }: ISidebar) => {
 
         {/* toggle sidebar button */}
         <div
+          title="toggle-sidebar"
           className={`absolute -top-2 hidden md:flex ${
             isCollapsed ? "-right-9" : "-right-11"
           } w-10 aspect-square flex items-center justify-center rounded-full bg-yellow-400 hover:bg-yellow-300 active:bg-slate-200 transform ease-out duration-100 cursor-pointer`}
@@ -51,6 +61,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }: ISidebar) => {
           )}
           {optionGroup.optionsList.map((option, idx) => (
             <div
+              key={idx}
               className={`flex  items-center my-2 py-3 ${
                 isCollapsed ? "justify-center px-0" : "px-4"
               } rounded-md cursor-pointer  ${

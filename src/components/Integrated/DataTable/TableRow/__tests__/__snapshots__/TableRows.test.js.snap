@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableRows /> should render correctly 1`] = `
+Array [
+  <div
+    class="my-6 rounded-lg shadow-lg bg-white"
+    data-testid="table-row"
+  >
+    <div
+      class="grid grid-rows-4 md:grid-rows-1 gap-y-10 md:grid-cols-2 lg:grid-cols-7 py-4 px-4 border-b last-of-type:border-none lg:hover:bg-slate-100 transform ease-out duration-100"
+    >
+      <div
+        class="flex items-center"
+        title="user-details"
+      >
+        <img
+          alt="jane doe"
+          class="w-16 lg:w-10 mr-4 aspect-square rounded-full false"
+          src="https://randomuser.me/api/portraits/thumb/women/16.jpg"
+        />
+        <div
+          class="flex flex-col overflow-hidden"
+        >
+          <p
+            class="tracking-wide  text-cyan-900 font-semibold pr-4 text-sm md:text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+            data-testid="paragraph"
+          >
+            jane doe
+          </p>
+        </div>
+      </div>
+      <div
+        title="candidate-city-country"
+      >
+        <span>
+          <p
+            class="tracking-wide  text-cyan-900 font-semibold w-10/12 text-lg whitespace-nowrap text-ellipsis overflow-hidden capitalize"
+            data-testid="paragraph"
+          >
+            johannesburg
+          </p>
+        </span>
+        <span>
+          <p
+            class="tracking-wide  text-slate-700 capitalize opacity-75"
+            data-testid="paragraph"
+          >
+            south africa
+          </p>
+        </span>
+      </div>
+      <div
+        class="relative z-20"
+        title="application-stage"
+      >
+        <select
+          class="w-full lg:w-fit text-lg font-semibold text-slate-700 capitalize after:absolute after:top-3 after:right-3 after:w-0 after:h-0 after:border-none focus-visible:outline-none"
+          data-testid="stage-selector"
+          name="stage"
+        >
+          <option
+            class="p-10 text-lg"
+            data-testid="stage-option"
+            value="1"
+          >
+            new applied
+          </option>
+          <option
+            class="p-10 text-lg"
+            data-testid="stage-option"
+            value="2"
+          >
+            screening
+          </option>
+          <option
+            class="p-10 text-lg"
+            data-testid="stage-option"
+            value="3"
+          >
+            code challenge
+          </option>
+          <option
+            class="p-10 text-lg"
+            data-testid="stage-option"
+            value="4"
+          >
+            interview
+          </option>
+          <option
+            class="p-10 text-lg"
+            data-testid="stage-option"
+            value="5"
+          >
+            hire
+          </option>
+        </select>
+        <div
+          class=" mt-2 flex"
+        >
+          <div
+            class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-orange-500"
+          >
+            <p
+              class="tracking-wide  text-slate-700 text-white"
+              data-testid="paragraph"
+            >
+              1
+            </p>
+          </div>
+          <div
+            class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-orange-500"
+          >
+            <p
+              class="tracking-wide  text-slate-700 text-white"
+              data-testid="paragraph"
+            >
+              2
+            </p>
+          </div>
+          <div
+            class="px-2.5 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-orange-500"
+          >
+            <p
+              class="tracking-wide  text-slate-700 text-white"
+              data-testid="paragraph"
+            >
+              3
+            </p>
+          </div>
+          <div
+            class="px-3 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-neutral-300"
+          />
+          <div
+            class="px-3 mx-0.5 first-of-type:ml-0 flex justify-center items-center rounded bg-neutral-300"
+          />
+        </div>
+      </div>
+      <div
+        title="position-applied"
+      >
+        <span>
+          <p
+            class="tracking-wide  text-cyan-900 font-semibold w-10/12 text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+            data-testid="paragraph"
+          >
+            fullstack developer
+          </p>
+        </span>
+        <span>
+          <p
+            class="tracking-wide  text-slate-700 capitalize opacity-75"
+            data-testid="paragraph"
+          >
+            dev team
+          </p>
+        </span>
+      </div>
+      <p
+        class="tracking-wide  text-cyan-900 font-semibold text-lg"
+        data-testid="paragraph"
+      >
+        Wed, 28 Sept 2016
+      </p>
+      <div
+        class="flex items-center"
+        title="user-details"
+      >
+        <img
+          alt="duduzile hlongwane"
+          class="w-16 lg:w-10 mr-4 aspect-square rounded-full hidden lg:flex"
+          src="https://media-exp1.licdn.com/dms/image/C4D03AQELG5uq0_LIug/profile-displayphoto-shrink_100_100/0/1637782454380?e=1667433600&v=beta&t=976dwrMZyY3VL1L48bQwAOvR730al8Ad2-vGvz4pgE8"
+        />
+        <div
+          class="flex flex-col overflow-hidden"
+        >
+          <p
+            class="tracking-wide  text-slate-700 flex lg:hidden capitalize"
+            data-testid="paragraph"
+          >
+            owner
+          </p>
+          <p
+            class="tracking-wide  text-cyan-900 font-semibold pr-4 text-sm md:text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+            data-testid="paragraph"
+          >
+            duduzile hlongwane
+          </p>
+        </div>
+      </div>
+      <div
+        class="hidden w-full lg:flex"
+      >
+        <button
+          class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 bg-yellow-400 active:bg-yellow-600"
+          data-testid="button-primary"
+        >
+          See more
+        </button>
+      </div>
+      <div
+        class="lg:hidden"
+      >
+        <button
+          class="flex flex-row justify-center items-center mx-2 last-of-type:mr-0 py-2 px-6 text-slate-800 text-base font-bold tracking-widest rounded-md capitalize cursor-pointer hover:bg-opacity-75 transform ease-out duration-100 bg-yellow-400 active:bg-yellow-600"
+          data-testid="button-primary"
+        >
+          see more
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderButton /> should render correctly 1`] = `
+<button
+  class="w-10 lg:w-14 aspect-square flex justify-center items-center rounded-full last-of-type:mx-4 cursor-pointer transform ease-out duration-100 cursor-pointer bg-yellow-400 hover:bg-opacity-80"
+  data-testid="header-button-primary"
+>
+  <svg
+    class="text-slate-500 !text-slate-800"
+    data-testid="icon-add"
+    fill="currentColor"
+    height="28"
+    stroke="currentColor"
+    stroke-width="0"
+    viewBox="0 0 512 512"
+    width="28"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z"
+    />
+  </svg>
+</button>
+`;

@@ -10,11 +10,18 @@ import { Button } from "../../../../Atomic/Button";
 import { Icon } from "../../../../Atomic/Icon";
 import { Text } from "../../../../Atomic/Typography/Text";
 
+/**
+ * @returns header element
+ */
+
 const Header = () => {
   const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
 
   return (
-    <header className="relative flex flex-row justify-between items-center px-5 md:px-10 lg:px-20 py-3 bg-white shadow">
+    <header
+      title="header"
+      className="relative flex flex-row justify-between items-center px-5 md:px-10 lg:px-20 py-3 bg-white shadow"
+    >
       <div className="flex flex-1">
         {/* logo => hidden on smaller screens */}
         <div className="md:hidden">
@@ -54,12 +61,15 @@ const Header = () => {
 
       {/* menu => hidden on smaller screens */}
       <div
-        className={`fixed md:hidden top-0 ${isMenuVisible ? "left-0" : "translate-x-full"} bottom-0 px-10 flex flex-col justify-center items-center w-screen h-screen bg-slate-900 bg-opacity-90 backdrop-blur-md z-40 transition-transform ease-out duration-300`}
+        className={`fixed md:hidden top-0 ${
+          isMenuVisible ? "left-0" : "translate-x-full"
+        } bottom-0 px-10 flex flex-col justify-center items-center w-screen h-screen bg-slate-900 bg-opacity-90 backdrop-blur-md z-40 transition-transform ease-out duration-300`}
       >
         {SidebarMenuOptions.map((optionGroup, idx) => (
           <div key={idx} className="mb-0">
             {optionGroup.optionsList.map((option, idx) => (
               <div
+                key={idx}
                 className={`flex justify-center items-center my-2 py-3 px-6 rounded-md cursor-pointer  ${
                   option.label === "candidates"
                     ? "bg-yellow-500"

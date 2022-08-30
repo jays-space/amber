@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from 'axios';
 
 // TYPES
 import { CandidateType } from "../../types/types";
@@ -15,14 +16,21 @@ import { TabMenu } from "../../components/Integrated/TabMenu";
 import { Login } from "../../components/Integrated/CandidateDetails/Login";
 import { Spinner } from "../../components/Integrated/Spinner";
 
+/**
+ * @returns candidate page with data from backend
+ */
+
 const CandidatePage = () => {
   const [candidate, setCandidate] = useState<CandidateType | null>(null);
 
   useEffect(() => {
+    document.title = "Candidate | Amber";
+  }, []);
+
+  useEffect(() => {
     const getData = async () => {
-      await fetch(apiUrl)
-        .then((res) => res.json())
-        .then((data) =>
+      await axios.get(apiUrl)
+        .then(({data}) =>
           setCandidate({
             ...data.results[0],
             stage: 5,
@@ -39,8 +47,14 @@ const CandidatePage = () => {
   if (!candidate) return <Spinner />;
 
   return (
-    <div className="flex flex-col justify-center">
-      <CandidatePageHeader candidate={candidate} />
+    <div data-testid='candidate-page' className="flex flex-col justify-center">
+      <CandidatePageHeader
+        name={candidate.name}
+        nat={candidate.nat}
+        picture={candidate.picture}
+        position={candidate.position}
+        stage={candidate.stage}
+      />
 
       {/* content */}
       <div className="my-6 py-3 px-4 rounded-lg shadow-lg bg-white">
@@ -50,16 +64,25 @@ const CandidatePage = () => {
 
         {/* candidate details */}
         <div className="mt-5 lg:mt-20 lg:px-4">
-          <Application candidate={candidate} />
+          <Application registered={candidate.registered} id={candidate.id} />
 
           <div className="mt-16 lg:mt-10 mb-2 grid grid-flow-row gap-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <BasicInfo candidate={candidate} />
-              <LocationInfo candidate={candidate} />
+              <BasicInfo
+                basicInfo={{
+                  cell: candidate.cell,
+                  dob: candidate.dob,
+                  email: candidate.email,
+                  fullName: candidate.name,
+                  gender: candidate.gender,
+                  phone: candidate.phone,
+                }}
+              />
+              <LocationInfo location={candidate.location} />
             </div>
 
             {/* login info */}
-            <Login candidate={candidate} />
+            <Login authData={candidate.login} />
           </div>
         </div>
       </div>

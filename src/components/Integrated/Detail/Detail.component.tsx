@@ -15,7 +15,10 @@ const Detail = ({
   className = "",
 }: IDetail) => {
   return (
-    <div className={`flex flex-col ${className}`}>
+    <div
+      data-testid={`${label}-details`}
+      className={`flex flex-col ${className}`}
+    >
       <Text className={`mb-2 text-xs capitalize`}>{label}</Text>
       <span className="flex">
         {content.map((content, idx) => (

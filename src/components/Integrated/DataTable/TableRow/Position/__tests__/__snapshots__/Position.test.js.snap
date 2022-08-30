@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Position /> should render correctly 1`] = `
+<div
+  title="position-applied"
+>
+  <span>
+    <p
+      class="tracking-wide  text-cyan-900 font-semibold w-10/12 text-lg capitalize whitespace-nowrap text-ellipsis overflow-hidden"
+      data-testid="paragraph"
+    >
+      fullstack developer
+    </p>
+  </span>
+  <span>
+    <p
+      class="tracking-wide  text-slate-700 capitalize opacity-75"
+      data-testid="paragraph"
+    >
+      development team
+    </p>
+  </span>
+</div>
+`;

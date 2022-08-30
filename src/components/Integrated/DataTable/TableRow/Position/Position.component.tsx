@@ -7,10 +7,14 @@ import { Text } from "../../../../Atomic/Typography/Text";
 interface IPosition {
   position: CandidatePositionType;
 }
+/**
+ * @param position -> candidate position
+ * @returns datable component rendering applied position
+ */
 
 const Position = ({ position }: IPosition) => {
   return (
-    <div>
+    <div title="position-applied">
       <span>
         <Text
           strong

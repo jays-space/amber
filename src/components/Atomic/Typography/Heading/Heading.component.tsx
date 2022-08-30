@@ -1,6 +1,7 @@
 /**
  * @param variant (optional): element type heading to return (default h1)
  * @param label: title of the heading
+ * @param capitalize (optional): add capitalize style to className
  * @param className (optional): additional classes to be added
  *
  * @returns heading element depending on the variant

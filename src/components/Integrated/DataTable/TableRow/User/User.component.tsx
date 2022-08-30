@@ -7,9 +7,16 @@ interface IUsername {
   candidate?: boolean;
 }
 
+/**
+ * @param name -> candidate full name (formatted)
+ * @param avatar -> candidate avatar url
+ * @param candidate -> determines if thu user is a candidate or recruiter
+ * @returns datable component rendering user details
+ */
+
 const User = ({ name, avatar, candidate = false }: IUsername) => {
   return (
-    <div className="flex items-center">
+    <div title="user-details" className="flex items-center">
       <img
         src={avatar}
         alt={name}

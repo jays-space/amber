@@ -11,6 +11,17 @@ interface IButton {
   onClick?: () => void;
 }
 
+/**
+ * Button component
+ *
+ * @param variant -> type of button to return, "primary" by default
+ * @param label (optional) -> the text content of the button, "add label" by default
+ * @param icon (optional) -> name of icon to pass into Icon component
+ * @param onClick (optional) -> function to be executed on button click
+ *
+ * @returns a custom button component
+ */
+
 const Button = ({
   variant = "primary",
   label = "add label",
@@ -22,45 +33,49 @@ const Button = ({
   switch (variant) {
     case "icon-dark":
       return (
-        <div
+        <button
           onClick={onClick}
+          data-testid="button-icon-dark"
           className={`${baseStyles} w-11 aspect-square !p-2 bg-slate-500  active:bg-slate-600`}
         >
           <Icon name={icon} className="!text-white" size={24} />
-        </div>
+        </button>
       );
 
     case "icon-light":
       return (
-        <div
+        <button
           onClick={onClick}
+          data-testid="button-icon-light"
           className={`${baseStyles} w-11 aspect-square !p-2 bg-white hover:bg-slate-50 active:bg-slate-200`}
         >
           <Icon name={icon} className="text-slate-700" size={24} />
-        </div>
+        </button>
       );
 
     case "secondary":
       return (
-        <div
+        <button
           onClick={onClick}
+          data-testid="button-secondary"
           className={`${baseStyles} !py-1.5 text-cyan-800 border-2 border-cyan-800 border-opacity-75  active:border-cyan-900`}
         >
           <Icon name={icon} className="mr-2 !text-cyan-800" />
           {label}
-        </div>
+        </button>
       );
 
     case "primary":
     default:
       return (
-        <div
+        <button
           onClick={onClick}
+          data-testid="button-primary"
           className={`${baseStyles} bg-yellow-400 active:bg-yellow-600`}
         >
           <Icon name={icon} className="mr-2 !text-slate-700" />
           {label}
-        </div>
+        </button>
       );
   }
 };

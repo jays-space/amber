@@ -1,6 +1,10 @@
 // COMPONENTS
 import { Text } from "../../Atomic/Typography/Text";
 
+/**
+ * @returns tab menu
+ */
+
 const tabMenuOptions = [
   { label: "details", active: true },
   { label: "resume", active: false },
@@ -10,9 +14,10 @@ const tabMenuOptions = [
 
 const TabMenu = () => {
   return (
-    <div className="hidden lg:flex">
+    <div title="tab-menu" className="hidden lg:flex">
       {tabMenuOptions.map((option) => (
         <div
+          key={option.label}
           className={`px-6 py-4 cursor-pointer hover:bg-slate-50 transform ease-out delay-100 ${
             option.active && "border-b-2 border-yellow-500"
           }`}
