@@ -43,7 +43,7 @@ const CandidatePageHeader = ({
       className="flex flex-col lg:flex-row justify-between items-center my-10 lg:my-0"
     >
       {/* candidate details */}
-      <div className="flex flex-col lg:flex-row items-center">
+      <div className="flex flex-col lg:flex-row items-center ">
         <div className="hidden lg:flex">
           <Button
             variant="icon-dark"
@@ -57,7 +57,7 @@ const CandidatePageHeader = ({
           alt={`${name.first} ${name.last}'s avatar`}
           className="rounded-full mx-4"
         />
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center lg:items-start">
           {/* name + nationality */}
           <div className="flex items-center gap-2">
             <Heading variant="h3" label={`${name.first} ${name.last}`} />
