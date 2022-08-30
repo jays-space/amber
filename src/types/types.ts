@@ -25,6 +25,7 @@ export type IconNamesType =
   | "hidden"
   | "search"
   | "menu"
+  | "spinner"
   | undefined;
 
 export type SidebarOptionType = {

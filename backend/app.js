@@ -1,8 +1,9 @@
 const createServer = require("./utils/server");
 
-require("dotenv").config();
+require('dotenv').config()
 const port = process.env.PORT;
 
+// initialize server and maintain
 createServer()
   .then((server) => {
     server.listen(port, () => {

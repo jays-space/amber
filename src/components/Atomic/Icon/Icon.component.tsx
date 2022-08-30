@@ -22,6 +22,7 @@ import {
 import { SiBmcsoftware } from "react-icons/si";
 import { TiArrowMinimise } from "react-icons/ti";
 import { HiOutlineMail } from "react-icons/hi";
+import { CgSpinnerTwoAlt } from "react-icons/cg";
 
 // TYPES
 import { IconNamesType } from "../../../types/types";
@@ -202,6 +203,15 @@ const Icon = ({
     case "menu":
       return (
         <AiOutlineMenu
+          size={size}
+          className={`text-slate-500 ${className}`}
+          onClick={onClick}
+        />
+      );
+
+    case "spinner":
+      return (
+        <CgSpinnerTwoAlt
           size={size}
           className={`text-slate-500 ${className}`}
           onClick={onClick}

@@ -3,16 +3,20 @@ import { useEffect, useState } from "react";
 // TYPES
 import { CandidateType } from "../../types/types";
 
+// CONSTANTS
+import apiUrl from "../../constants/api.constants";
+
 // COMPONENTS
 import { DataTable } from "../../components/Integrated/DataTable";
 import { CandidatesPageHeader } from "../../components/Integrated/PageHeader/CandidatesPage";
+import { Spinner } from "../../components/Integrated/Spinner";
 
 const CandidatesPage = () => {
   const [candidates, setCandidates] = useState<CandidateType[] | null>(null);
 
   useEffect(() => {
     const getData = async () => {
-      await fetch("http://localhost:5000/api/v1/employees")
+      await fetch(apiUrl)
         .then((res) => res.json())
         .then((data) =>
           setCandidates(
@@ -30,7 +34,7 @@ const CandidatesPage = () => {
   }, []);
 
   // Render spinner if data is not yet ready
-  if (!candidates) return <h1>"loading..."</h1>;
+  if (!candidates) return <Spinner />;
 
   return (
     <>

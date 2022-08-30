@@ -1,7 +1,9 @@
-const employeeData = require("../../constants/response");
+const data = require("../../constants/response");
 
-const getEmployees = (req, res) => {
-  const responseFromDB = [employeeData];
+// resource that queries the db
+// name of resource matches the name in the spec document
+const getCandidates = (req, res) => {
+  const responseFromDB = [data];
 
   res.json({
     results: responseFromDB,
@@ -14,4 +16,4 @@ const getEmployees = (req, res) => {
   });
 };
 
-module.exports = { getEmployees };
+module.exports = { getCandidates };

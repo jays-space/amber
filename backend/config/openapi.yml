@@ -1,8 +1,10 @@
+# API SPECIFICATION DOCUMENT
+
 openapi: 3.0.3
 info:
-  title: AMBER SOFTWARE EMPLOYEES REST API
+  title: AMBER SOFTWARE CANDIDATES REST API
   description: |
-    This API allows getting the employee details of amber software employees
+    This API allows getting the Candidate details of amber software job application process
   version: "1.3"
   contact:
     name: Jay Mondlana
@@ -14,11 +16,11 @@ info:
 servers:
   - url: /api/v1
 paths:
-  /employees:
+  /candidates:
     get:
-      summary: Get the employees
-      operationId: getEmployees
-      description: Retrieves all employees in the database.
+      summary: Get the candidates
+      operationId: getCandidates
+      description: Retrieves all candidates in the database.
       responses:
         "200":
           description: Success
@@ -30,7 +32,7 @@ paths:
                   results:
                     type: array
                     items:
-                      $ref: "#/components/schemas/Employee"
+                      $ref: "#/components/schemas/Candidate"
                   info:
                     type: object
                     properties:
@@ -63,11 +65,11 @@ paths:
       parameters: []
 components:
   schemas:
-    Employee:
-      title: Employee
+    Candidate:
+      title: Candidate
       type: object
       additionalProperties: false
-      description: Details about an employee
+      description: Details about a candidate
       properties:
         gender:
           type: string
@@ -115,13 +117,13 @@ components:
         email:
           type: string
           format: email
-          example: employee.email@email.com
+          example: candidate.email@email.com
         login:
           type: object
           properties:
             uuid:
               type: string
-              description: Unique login identifier for the given employee
+              description: Unique login identifier for the given candidate
               format: uuid
             username:
               type: string
@@ -130,16 +132,16 @@ components:
               format: password
             salt:
               type: string
-              description: Salt encrypted version of the employee password
+              description: Salt encrypted version of the candidate password
             md5:
               type: string
-              description: MD5 encrypted version of the employee password
+              description: MD5 encrypted version of the candidate password
             sha1:
               type: string
-              description: SHA1 encrypted version of the employee password
+              description: SHA1 encrypted version of the candidate password
             sha256:
               type: string
-              description: SHA256 encrypted version of the employee password
+              description: SHA256 encrypted version of the candidate password
         dob:
           type: object
           properties:

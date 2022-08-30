@@ -1,4 +1,4 @@
-const employee = {
+const candidate = {
   gender: "female",
   name: {
     title: "Madame",
@@ -55,4 +55,4 @@ const employee = {
   nat: "CH",
 };
 
-module.exports = employee;
+module.exports = candidate;
