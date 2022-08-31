@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "test": "jest --forceExit --detectOpenHandles  --watchAll --maxWorkers=1"
-    
   },
   "author": "jay mondlana",
   "license": "ISC",
@@ -16,6 +15,7 @@
     "express": "^4.18.1",
     "express-openapi-validator": "^4.13.8",
     "swagger-routes-express": "^3.3.2",
+    "swagger-ui-express": "^4.5.0",
     "validator": "^13.7.0",
     "yamljs": "^0.3.0"
   },

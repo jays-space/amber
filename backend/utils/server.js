@@ -3,6 +3,7 @@ const OpenApiValidator = require("express-openapi-validator");
 const { connector, summarise } = require("swagger-routes-express");
 const YAML = require("yamljs");
 const cors = require("cors");
+const swaggerUi = require('swagger-ui-express');
 
 const api = require("../api/controllers");
 
@@ -14,6 +15,7 @@ const api = require("../api/controllers");
 const createServer = async () => {
   // get constants and functions
   const apiSpec = "./config/openapi.yml";
+  const apiSpecJSON = "./config/openapi.js";
 
   // load api specification
   const apiDefinition = YAML.load(apiSpec);
@@ -23,6 +25,7 @@ const createServer = async () => {
   console.info(apiSummary);
 
   const server = express();
+  server.use('/api/v1/api-docs', swaggerUi.serve, swaggerUi.setup(apiSpecJSON));
 
   // validator options
   const options = {
