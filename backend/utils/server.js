@@ -25,7 +25,7 @@ const createServer = async () => {
   console.info(apiSummary);
 
   const server = express();
-  server.use('/api/v1/api-docs', swaggerUi.serve, swaggerUi.setup(apiSpecJSON));
+  server.use('/api/v1/api-docs', swaggerUi.serve, swaggerUi.setup(apiSpec));
 
   // validator options
   const options = {
