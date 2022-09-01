@@ -1,6 +1,7 @@
 # Amber Assessment Project
 
 An app to manage candidate recruitment.
+- UI Design by https://dribbble.com/bagus_fikri
 
 ## To Launch App
  - launch nodemon in your terminal to start a server
@@ -63,6 +64,4 @@ In the backend project directory, you can run:
 ### `nodemon app.js`
 
 Launches the server and listens to changes.\
-
-- UI Design by https://dribbble.com/bagus_fikri
 
