@@ -64,3 +64,5 @@ In the backend project directory, you can run:
 
 Launches the server and listens to changes.\
 
+- UI Design by https://dribbble.com/bagus_fikri
+
